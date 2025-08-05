@@ -1,4 +1,4 @@
-# 🤖 InMoov AI Hand Robotic Project
+# 🤖 FPGA Bionic Robot Arm
 
 ## 📖 Table of Contents
 - [Overview](#-overview)
