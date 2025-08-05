@@ -1,4 +1,4 @@
-# 🤖 FPGA Bionic Robot Arm
+# 🤖 FPGA Bionic Robot Hand
 
 ## 📖 Table of Contents
 - [Overview](#-overview)
