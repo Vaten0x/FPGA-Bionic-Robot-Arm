@@ -16,7 +16,6 @@ This project implements a fully 3D-printed robotic hand controlled by an FPGA (D
 - **Custom 3D-Printed Hand & Mechanical Claw**: Designed based on the InMoov open-source hand project.
 - **PCA9685 Driver (Optional)**: Previously used with Raspberry Pi for testing, now bypassed in final FPGA-controlled version.
 
-
 ## Circuit Diagram (with Raspberry Pi testing)
 
 ![circuit_diagram](images/circuit_diagram.jpg)
