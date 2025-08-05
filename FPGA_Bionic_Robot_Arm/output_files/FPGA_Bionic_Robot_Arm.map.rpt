@@ -1,5 +1,5 @@
 Analysis & Synthesis report for FPGA_Bionic_Robot_Arm
-Mon Aug 04 21:38:17 2025
+Tue Aug 05 01:47:07 2025
 Quartus Prime Version 16.1.2 Build 203 01/18/2017 SJ Lite Edition
 
 
@@ -44,7 +44,7 @@ agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Mon Aug 04 21:38:17 2025       ;
+; Analysis & Synthesis Status     ; Successful - Tue Aug 05 01:47:07 2025       ;
 ; Quartus Prime Version           ; 16.1.2 Build 203 01/18/2017 SJ Lite Edition ;
 ; Revision Name                   ; FPGA_Bionic_Robot_Arm                       ;
 ; Top-level Entity Name           ; FPGA_Bionic_Robot_Arm                       ;
@@ -281,7 +281,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 16.1.2 Build 203 01/18/2017 SJ Lite Edition
-    Info: Processing started: Mon Aug 04 21:38:06 2025
+    Info: Processing started: Tue Aug 05 01:46:58 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off FPGA_Bionic_Robot_Arm -c FPGA_Bionic_Robot_Arm
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 14 of the 14 processors detected
@@ -300,9 +300,9 @@ Info (21057): Implemented 41 device resources after synthesis - the final resour
     Info (21059): Implemented 5 output pins
     Info (21061): Implemented 35 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 2 warnings
-    Info: Peak virtual memory: 4901 megabytes
-    Info: Processing ended: Mon Aug 04 21:38:17 2025
-    Info: Elapsed time: 00:00:11
-    Info: Total CPU time (on all processors): 00:00:26
+    Info: Peak virtual memory: 4893 megabytes
+    Info: Processing ended: Tue Aug 05 01:47:07 2025
+    Info: Elapsed time: 00:00:09
+    Info: Total CPU time (on all processors): 00:00:23
 
 
