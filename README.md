@@ -33,8 +33,6 @@ This project implements a fully 3D-printed robotic hand controlled by an FPGA (D
 ![Soldering for sensor on fingertip](images/image3.jpg)
 ![Final Product](images/image4.jpg)
 
-### 🛠️ For more images and videos of the project's development and my debugging story with hardware/software 🤯, [click here!](images/README.md).
-
 Special thanks to the members of the [InMoov Discord Server](https://discord.gg/FKJ6GSEwHr) for their invaluable guidance and support throughout the project. Especially to hairygael, the admin of the server and the creator of the InMoov project.
 
 This project is licensed under the MIT License. See the LICENSE file for details.
