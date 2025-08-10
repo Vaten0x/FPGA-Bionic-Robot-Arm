@@ -15,7 +15,7 @@ This project implements a fully 3D-printed robotic hand controlled by an FPGA (D
 - **HK-15298 Servo Motors**: Five servo motors drive the fingers of the robotic hand. (An additional wrist motor is included in hardware but unused in this prototype.)
 - **3D-Printed Robotic Hand**: Designed based on the InMoov open-source hand project.
 - **PCA9685 Driver (Used for testing)**: Previously used with Raspberry Pi for testing, now bypassed in final FPGA-controlled version.
-- **Raspberry Pi**: Used during development for I2C control and quick prototyping before transitioning to the FPGA system.
+- **Raspberry Pi (Used for testing)**: Used during development for I2C control and quick prototyping before transitioning to the FPGA system.
 
 ## Circuit Diagram (with Raspberry Pi testing)
 
