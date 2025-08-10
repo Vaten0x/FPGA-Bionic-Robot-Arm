@@ -1,5 +1,5 @@
 Analysis & Synthesis report for FPGA_Bionic_Robot_Arm
-Tue Aug 05 22:23:36 2025
+Sun Aug 10 01:13:10 2025
 Quartus Prime Version 16.1.2 Build 203 01/18/2017 SJ Lite Edition
 
 
@@ -13,13 +13,19 @@ Quartus Prime Version 16.1.2 Build 203 01/18/2017 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Inverted Register Statistics
- 10. Parameter Settings for User Entity Instance: pwm_test:pwm_inst
- 11. Port Connectivity Checks: "pwm_test:pwm_inst"
- 12. Post-Synthesis Netlist Statistics for Top Partition
- 13. Elapsed Time Per Partition
- 14. Analysis & Synthesis Messages
+  8. Analysis & Synthesis DSP Block Usage Summary
+  9. Registers Removed During Synthesis
+ 10. General Register Statistics
+ 11. Inverted Register Statistics
+ 12. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 13. Parameter Settings for User Entity Instance: pwm_test:pwm_inst|servo_pwm:u0
+ 14. Parameter Settings for User Entity Instance: pwm_test:pwm_inst|servo_pwm:u1
+ 15. Parameter Settings for User Entity Instance: pwm_test:pwm_inst|servo_pwm:u2
+ 16. Parameter Settings for User Entity Instance: pwm_test:pwm_inst|servo_pwm:u3
+ 17. Parameter Settings for User Entity Instance: pwm_test:pwm_inst|servo_pwm:u4
+ 18. Post-Synthesis Netlist Statistics for Top Partition
+ 19. Elapsed Time Per Partition
+ 20. Analysis & Synthesis Messages
 
 
 
@@ -46,17 +52,17 @@ agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Tue Aug 05 22:23:35 2025       ;
+; Analysis & Synthesis Status     ; Successful - Sun Aug 10 01:13:10 2025       ;
 ; Quartus Prime Version           ; 16.1.2 Build 203 01/18/2017 SJ Lite Edition ;
 ; Revision Name                   ; FPGA_Bionic_Robot_Arm                       ;
 ; Top-level Entity Name           ; FPGA_Bionic_Robot_Arm                       ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 43                                          ;
+; Total registers                 ; 187                                         ;
 ; Total pins                      ; 6                                           ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
-; Total DSP Blocks                ; 0                                           ;
+; Total DSP Blocks                ; 5                                           ;
 ; Total HSSI RX PCSs              ; 0                                           ;
 ; Total HSSI PMA RX Deserializers ; 0                                           ;
 ; Total HSSI TX PCSs              ; 0                                           ;
@@ -175,6 +181,7 @@ agreement for further details.
 +----------------------------------+-----------------+------------------------+-----------------------------------------------------------------------------------------------------+---------+
 ; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                                        ; Library ;
 +----------------------------------+-----------------+------------------------+-----------------------------------------------------------------------------------------------------+---------+
+; servo_pwm.v                      ; yes             ; User Verilog HDL File  ; C:/Users/renew/Downloads/vscode/FPGA-Bionic-Robot-Arm/FPGA_Bionic_Robot_Arm/servo_pwm.v             ;         ;
 ; pwm_test.v                       ; yes             ; User Verilog HDL File  ; C:/Users/renew/Downloads/vscode/FPGA-Bionic-Robot-Arm/FPGA_Bionic_Robot_Arm/pwm_test.v              ;         ;
 ; FPGA_Bionic_Robot_Arm.v          ; yes             ; User Verilog HDL File  ; C:/Users/renew/Downloads/vscode/FPGA-Bionic-Robot-Arm/FPGA_Bionic_Robot_Arm/FPGA_Bionic_Robot_Arm.v ;         ;
 +----------------------------------+-----------------+------------------------+-----------------------------------------------------------------------------------------------------+---------+
@@ -185,37 +192,196 @@ agreement for further details.
 +---------------------------------------------+----------------+
 ; Resource                                    ; Usage          ;
 +---------------------------------------------+----------------+
-; Estimate of Logic utilization (ALMs needed) ; 42             ;
+; Estimate of Logic utilization (ALMs needed) ; 156            ;
 ;                                             ;                ;
-; Combinational ALUT usage for logic          ; 71             ;
+; Combinational ALUT usage for logic          ; 227            ;
 ;     -- 7 input functions                    ; 0              ;
-;     -- 6 input functions                    ; 12             ;
-;     -- 5 input functions                    ; 8              ;
-;     -- 4 input functions                    ; 5              ;
-;     -- <=3 input functions                  ; 46             ;
+;     -- 6 input functions                    ; 70             ;
+;     -- 5 input functions                    ; 27             ;
+;     -- 4 input functions                    ; 22             ;
+;     -- <=3 input functions                  ; 108            ;
 ;                                             ;                ;
-; Dedicated logic registers                   ; 43             ;
+; Dedicated logic registers                   ; 187            ;
 ;                                             ;                ;
 ; I/O pins                                    ; 6              ;
 ;                                             ;                ;
-; Total DSP Blocks                            ; 0              ;
+; Total DSP Blocks                            ; 5              ;
 ;                                             ;                ;
 ; Maximum fan-out node                        ; CLOCK_50~input ;
-; Maximum fan-out                             ; 43             ;
-; Total fan-out                               ; 366            ;
-; Average fan-out                             ; 2.90           ;
+; Maximum fan-out                             ; 187            ;
+; Total fan-out                               ; 1347           ;
+; Average fan-out                             ; 3.13           ;
 +---------------------------------------------+----------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                   ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------+-----------------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                      ; Entity Name           ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------+-----------------------+--------------+
-; |FPGA_Bionic_Robot_Arm     ; 71 (0)              ; 43 (0)                    ; 0                 ; 0          ; 6    ; 0            ; |FPGA_Bionic_Robot_Arm                   ; FPGA_Bionic_Robot_Arm ; work         ;
-;    |pwm_test:pwm_inst|     ; 71 (71)             ; 43 (43)                   ; 0                 ; 0          ; 0    ; 0            ; |FPGA_Bionic_Robot_Arm|pwm_test:pwm_inst ; pwm_test              ; work         ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------+-----------------------+--------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------+-----------------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                   ; Entity Name           ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------+-----------------------+--------------+
+; |FPGA_Bionic_Robot_Arm     ; 227 (0)             ; 187 (0)                   ; 0                 ; 5          ; 6    ; 0            ; |FPGA_Bionic_Robot_Arm                                ; FPGA_Bionic_Robot_Arm ; work         ;
+;    |pwm_test:pwm_inst|     ; 227 (58)            ; 187 (40)                  ; 0                 ; 5          ; 0    ; 0            ; |FPGA_Bionic_Robot_Arm|pwm_test:pwm_inst              ; pwm_test              ; work         ;
+;       |servo_pwm:u0|       ; 77 (77)             ; 55 (55)                   ; 0                 ; 1          ; 0    ; 0            ; |FPGA_Bionic_Robot_Arm|pwm_test:pwm_inst|servo_pwm:u0 ; servo_pwm             ; work         ;
+;       |servo_pwm:u1|       ; 23 (23)             ; 23 (23)                   ; 0                 ; 1          ; 0    ; 0            ; |FPGA_Bionic_Robot_Arm|pwm_test:pwm_inst|servo_pwm:u1 ; servo_pwm             ; work         ;
+;       |servo_pwm:u2|       ; 23 (23)             ; 23 (23)                   ; 0                 ; 1          ; 0    ; 0            ; |FPGA_Bionic_Robot_Arm|pwm_test:pwm_inst|servo_pwm:u2 ; servo_pwm             ; work         ;
+;       |servo_pwm:u3|       ; 23 (23)             ; 23 (23)                   ; 0                 ; 1          ; 0    ; 0            ; |FPGA_Bionic_Robot_Arm|pwm_test:pwm_inst|servo_pwm:u3 ; servo_pwm             ; work         ;
+;       |servo_pwm:u4|       ; 23 (23)             ; 23 (23)                   ; 0                 ; 1          ; 0    ; 0            ; |FPGA_Bionic_Robot_Arm|pwm_test:pwm_inst|servo_pwm:u4 ; servo_pwm             ; work         ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------+-----------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++-----------------------------------------------+
+; Analysis & Synthesis DSP Block Usage Summary  ;
++---------------------------------+-------------+
+; Statistic                       ; Number Used ;
++---------------------------------+-------------+
+; Two Independent 18x18           ; 5           ;
+; Total number of DSP blocks      ; 5           ;
+;                                 ;             ;
+; Fixed Point Unsigned Multiplier ; 5           ;
++---------------------------------+-------------+
+
+
++--------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                     ;
++---------------------------------------------------+----------------------------------------------------+
+; Register name                                     ; Reason for Removal                                 ;
++---------------------------------------------------+----------------------------------------------------+
+; pwm_test:pwm_inst|servo_pwm:u4|high_ticks[22..31] ; Stuck at GND due to stuck port data_in             ;
+; pwm_test:pwm_inst|servo_pwm:u3|high_ticks[22..31] ; Stuck at GND due to stuck port data_in             ;
+; pwm_test:pwm_inst|servo_pwm:u2|high_ticks[22..31] ; Stuck at GND due to stuck port data_in             ;
+; pwm_test:pwm_inst|servo_pwm:u1|high_ticks[22..31] ; Stuck at GND due to stuck port data_in             ;
+; pwm_test:pwm_inst|servo_pwm:u0|high_ticks[22..31] ; Stuck at GND due to stuck port data_in             ;
+; pwm_test:pwm_inst|servo_pwm:u1|ctr[31]            ; Merged with pwm_test:pwm_inst|servo_pwm:u0|ctr[31] ;
+; pwm_test:pwm_inst|servo_pwm:u2|ctr[31]            ; Merged with pwm_test:pwm_inst|servo_pwm:u0|ctr[31] ;
+; pwm_test:pwm_inst|servo_pwm:u3|ctr[31]            ; Merged with pwm_test:pwm_inst|servo_pwm:u0|ctr[31] ;
+; pwm_test:pwm_inst|servo_pwm:u4|ctr[31]            ; Merged with pwm_test:pwm_inst|servo_pwm:u0|ctr[31] ;
+; pwm_test:pwm_inst|servo_pwm:u1|ctr[30]            ; Merged with pwm_test:pwm_inst|servo_pwm:u0|ctr[30] ;
+; pwm_test:pwm_inst|servo_pwm:u2|ctr[30]            ; Merged with pwm_test:pwm_inst|servo_pwm:u0|ctr[30] ;
+; pwm_test:pwm_inst|servo_pwm:u3|ctr[30]            ; Merged with pwm_test:pwm_inst|servo_pwm:u0|ctr[30] ;
+; pwm_test:pwm_inst|servo_pwm:u4|ctr[30]            ; Merged with pwm_test:pwm_inst|servo_pwm:u0|ctr[30] ;
+; pwm_test:pwm_inst|servo_pwm:u1|ctr[29]            ; Merged with pwm_test:pwm_inst|servo_pwm:u0|ctr[29] ;
+; pwm_test:pwm_inst|servo_pwm:u2|ctr[29]            ; Merged with pwm_test:pwm_inst|servo_pwm:u0|ctr[29] ;
+; pwm_test:pwm_inst|servo_pwm:u3|ctr[29]            ; Merged with pwm_test:pwm_inst|servo_pwm:u0|ctr[29] ;
+; pwm_test:pwm_inst|servo_pwm:u4|ctr[29]            ; Merged with pwm_test:pwm_inst|servo_pwm:u0|ctr[29] ;
+; pwm_test:pwm_inst|servo_pwm:u1|ctr[28]            ; Merged with pwm_test:pwm_inst|servo_pwm:u0|ctr[28] ;
+; pwm_test:pwm_inst|servo_pwm:u2|ctr[28]            ; Merged with pwm_test:pwm_inst|servo_pwm:u0|ctr[28] ;
+; pwm_test:pwm_inst|servo_pwm:u3|ctr[28]            ; Merged with pwm_test:pwm_inst|servo_pwm:u0|ctr[28] ;
+; pwm_test:pwm_inst|servo_pwm:u4|ctr[28]            ; Merged with pwm_test:pwm_inst|servo_pwm:u0|ctr[28] ;
+; pwm_test:pwm_inst|servo_pwm:u1|ctr[27]            ; Merged with pwm_test:pwm_inst|servo_pwm:u0|ctr[27] ;
+; pwm_test:pwm_inst|servo_pwm:u2|ctr[27]            ; Merged with pwm_test:pwm_inst|servo_pwm:u0|ctr[27] ;
+; pwm_test:pwm_inst|servo_pwm:u3|ctr[27]            ; Merged with pwm_test:pwm_inst|servo_pwm:u0|ctr[27] ;
+; pwm_test:pwm_inst|servo_pwm:u4|ctr[27]            ; Merged with pwm_test:pwm_inst|servo_pwm:u0|ctr[27] ;
+; pwm_test:pwm_inst|servo_pwm:u1|ctr[26]            ; Merged with pwm_test:pwm_inst|servo_pwm:u0|ctr[26] ;
+; pwm_test:pwm_inst|servo_pwm:u2|ctr[26]            ; Merged with pwm_test:pwm_inst|servo_pwm:u0|ctr[26] ;
+; pwm_test:pwm_inst|servo_pwm:u3|ctr[26]            ; Merged with pwm_test:pwm_inst|servo_pwm:u0|ctr[26] ;
+; pwm_test:pwm_inst|servo_pwm:u4|ctr[26]            ; Merged with pwm_test:pwm_inst|servo_pwm:u0|ctr[26] ;
+; pwm_test:pwm_inst|servo_pwm:u1|ctr[25]            ; Merged with pwm_test:pwm_inst|servo_pwm:u0|ctr[25] ;
+; pwm_test:pwm_inst|servo_pwm:u2|ctr[25]            ; Merged with pwm_test:pwm_inst|servo_pwm:u0|ctr[25] ;
+; pwm_test:pwm_inst|servo_pwm:u3|ctr[25]            ; Merged with pwm_test:pwm_inst|servo_pwm:u0|ctr[25] ;
+; pwm_test:pwm_inst|servo_pwm:u4|ctr[25]            ; Merged with pwm_test:pwm_inst|servo_pwm:u0|ctr[25] ;
+; pwm_test:pwm_inst|servo_pwm:u1|ctr[24]            ; Merged with pwm_test:pwm_inst|servo_pwm:u0|ctr[24] ;
+; pwm_test:pwm_inst|servo_pwm:u2|ctr[24]            ; Merged with pwm_test:pwm_inst|servo_pwm:u0|ctr[24] ;
+; pwm_test:pwm_inst|servo_pwm:u3|ctr[24]            ; Merged with pwm_test:pwm_inst|servo_pwm:u0|ctr[24] ;
+; pwm_test:pwm_inst|servo_pwm:u4|ctr[24]            ; Merged with pwm_test:pwm_inst|servo_pwm:u0|ctr[24] ;
+; pwm_test:pwm_inst|servo_pwm:u1|ctr[23]            ; Merged with pwm_test:pwm_inst|servo_pwm:u0|ctr[23] ;
+; pwm_test:pwm_inst|servo_pwm:u2|ctr[23]            ; Merged with pwm_test:pwm_inst|servo_pwm:u0|ctr[23] ;
+; pwm_test:pwm_inst|servo_pwm:u3|ctr[23]            ; Merged with pwm_test:pwm_inst|servo_pwm:u0|ctr[23] ;
+; pwm_test:pwm_inst|servo_pwm:u4|ctr[23]            ; Merged with pwm_test:pwm_inst|servo_pwm:u0|ctr[23] ;
+; pwm_test:pwm_inst|servo_pwm:u1|ctr[22]            ; Merged with pwm_test:pwm_inst|servo_pwm:u0|ctr[22] ;
+; pwm_test:pwm_inst|servo_pwm:u2|ctr[22]            ; Merged with pwm_test:pwm_inst|servo_pwm:u0|ctr[22] ;
+; pwm_test:pwm_inst|servo_pwm:u3|ctr[22]            ; Merged with pwm_test:pwm_inst|servo_pwm:u0|ctr[22] ;
+; pwm_test:pwm_inst|servo_pwm:u4|ctr[22]            ; Merged with pwm_test:pwm_inst|servo_pwm:u0|ctr[22] ;
+; pwm_test:pwm_inst|servo_pwm:u1|ctr[21]            ; Merged with pwm_test:pwm_inst|servo_pwm:u0|ctr[21] ;
+; pwm_test:pwm_inst|servo_pwm:u2|ctr[21]            ; Merged with pwm_test:pwm_inst|servo_pwm:u0|ctr[21] ;
+; pwm_test:pwm_inst|servo_pwm:u3|ctr[21]            ; Merged with pwm_test:pwm_inst|servo_pwm:u0|ctr[21] ;
+; pwm_test:pwm_inst|servo_pwm:u4|ctr[21]            ; Merged with pwm_test:pwm_inst|servo_pwm:u0|ctr[21] ;
+; pwm_test:pwm_inst|servo_pwm:u1|ctr[20]            ; Merged with pwm_test:pwm_inst|servo_pwm:u0|ctr[20] ;
+; pwm_test:pwm_inst|servo_pwm:u2|ctr[20]            ; Merged with pwm_test:pwm_inst|servo_pwm:u0|ctr[20] ;
+; pwm_test:pwm_inst|servo_pwm:u3|ctr[20]            ; Merged with pwm_test:pwm_inst|servo_pwm:u0|ctr[20] ;
+; pwm_test:pwm_inst|servo_pwm:u4|ctr[20]            ; Merged with pwm_test:pwm_inst|servo_pwm:u0|ctr[20] ;
+; pwm_test:pwm_inst|servo_pwm:u1|ctr[19]            ; Merged with pwm_test:pwm_inst|servo_pwm:u0|ctr[19] ;
+; pwm_test:pwm_inst|servo_pwm:u2|ctr[19]            ; Merged with pwm_test:pwm_inst|servo_pwm:u0|ctr[19] ;
+; pwm_test:pwm_inst|servo_pwm:u3|ctr[19]            ; Merged with pwm_test:pwm_inst|servo_pwm:u0|ctr[19] ;
+; pwm_test:pwm_inst|servo_pwm:u4|ctr[19]            ; Merged with pwm_test:pwm_inst|servo_pwm:u0|ctr[19] ;
+; pwm_test:pwm_inst|servo_pwm:u1|ctr[18]            ; Merged with pwm_test:pwm_inst|servo_pwm:u0|ctr[18] ;
+; pwm_test:pwm_inst|servo_pwm:u2|ctr[18]            ; Merged with pwm_test:pwm_inst|servo_pwm:u0|ctr[18] ;
+; pwm_test:pwm_inst|servo_pwm:u3|ctr[18]            ; Merged with pwm_test:pwm_inst|servo_pwm:u0|ctr[18] ;
+; pwm_test:pwm_inst|servo_pwm:u4|ctr[18]            ; Merged with pwm_test:pwm_inst|servo_pwm:u0|ctr[18] ;
+; pwm_test:pwm_inst|servo_pwm:u1|ctr[17]            ; Merged with pwm_test:pwm_inst|servo_pwm:u0|ctr[17] ;
+; pwm_test:pwm_inst|servo_pwm:u2|ctr[17]            ; Merged with pwm_test:pwm_inst|servo_pwm:u0|ctr[17] ;
+; pwm_test:pwm_inst|servo_pwm:u3|ctr[17]            ; Merged with pwm_test:pwm_inst|servo_pwm:u0|ctr[17] ;
+; pwm_test:pwm_inst|servo_pwm:u4|ctr[17]            ; Merged with pwm_test:pwm_inst|servo_pwm:u0|ctr[17] ;
+; pwm_test:pwm_inst|servo_pwm:u1|ctr[16]            ; Merged with pwm_test:pwm_inst|servo_pwm:u0|ctr[16] ;
+; pwm_test:pwm_inst|servo_pwm:u2|ctr[16]            ; Merged with pwm_test:pwm_inst|servo_pwm:u0|ctr[16] ;
+; pwm_test:pwm_inst|servo_pwm:u3|ctr[16]            ; Merged with pwm_test:pwm_inst|servo_pwm:u0|ctr[16] ;
+; pwm_test:pwm_inst|servo_pwm:u4|ctr[16]            ; Merged with pwm_test:pwm_inst|servo_pwm:u0|ctr[16] ;
+; pwm_test:pwm_inst|servo_pwm:u1|ctr[15]            ; Merged with pwm_test:pwm_inst|servo_pwm:u0|ctr[15] ;
+; pwm_test:pwm_inst|servo_pwm:u2|ctr[15]            ; Merged with pwm_test:pwm_inst|servo_pwm:u0|ctr[15] ;
+; pwm_test:pwm_inst|servo_pwm:u3|ctr[15]            ; Merged with pwm_test:pwm_inst|servo_pwm:u0|ctr[15] ;
+; pwm_test:pwm_inst|servo_pwm:u4|ctr[15]            ; Merged with pwm_test:pwm_inst|servo_pwm:u0|ctr[15] ;
+; pwm_test:pwm_inst|servo_pwm:u1|ctr[14]            ; Merged with pwm_test:pwm_inst|servo_pwm:u0|ctr[14] ;
+; pwm_test:pwm_inst|servo_pwm:u2|ctr[14]            ; Merged with pwm_test:pwm_inst|servo_pwm:u0|ctr[14] ;
+; pwm_test:pwm_inst|servo_pwm:u3|ctr[14]            ; Merged with pwm_test:pwm_inst|servo_pwm:u0|ctr[14] ;
+; pwm_test:pwm_inst|servo_pwm:u4|ctr[14]            ; Merged with pwm_test:pwm_inst|servo_pwm:u0|ctr[14] ;
+; pwm_test:pwm_inst|servo_pwm:u1|ctr[13]            ; Merged with pwm_test:pwm_inst|servo_pwm:u0|ctr[13] ;
+; pwm_test:pwm_inst|servo_pwm:u2|ctr[13]            ; Merged with pwm_test:pwm_inst|servo_pwm:u0|ctr[13] ;
+; pwm_test:pwm_inst|servo_pwm:u3|ctr[13]            ; Merged with pwm_test:pwm_inst|servo_pwm:u0|ctr[13] ;
+; pwm_test:pwm_inst|servo_pwm:u4|ctr[13]            ; Merged with pwm_test:pwm_inst|servo_pwm:u0|ctr[13] ;
+; pwm_test:pwm_inst|servo_pwm:u1|ctr[12]            ; Merged with pwm_test:pwm_inst|servo_pwm:u0|ctr[12] ;
+; pwm_test:pwm_inst|servo_pwm:u2|ctr[12]            ; Merged with pwm_test:pwm_inst|servo_pwm:u0|ctr[12] ;
+; pwm_test:pwm_inst|servo_pwm:u3|ctr[12]            ; Merged with pwm_test:pwm_inst|servo_pwm:u0|ctr[12] ;
+; pwm_test:pwm_inst|servo_pwm:u4|ctr[12]            ; Merged with pwm_test:pwm_inst|servo_pwm:u0|ctr[12] ;
+; pwm_test:pwm_inst|servo_pwm:u1|ctr[11]            ; Merged with pwm_test:pwm_inst|servo_pwm:u0|ctr[11] ;
+; pwm_test:pwm_inst|servo_pwm:u2|ctr[11]            ; Merged with pwm_test:pwm_inst|servo_pwm:u0|ctr[11] ;
+; pwm_test:pwm_inst|servo_pwm:u3|ctr[11]            ; Merged with pwm_test:pwm_inst|servo_pwm:u0|ctr[11] ;
+; pwm_test:pwm_inst|servo_pwm:u4|ctr[11]            ; Merged with pwm_test:pwm_inst|servo_pwm:u0|ctr[11] ;
+; pwm_test:pwm_inst|servo_pwm:u1|ctr[10]            ; Merged with pwm_test:pwm_inst|servo_pwm:u0|ctr[10] ;
+; pwm_test:pwm_inst|servo_pwm:u2|ctr[10]            ; Merged with pwm_test:pwm_inst|servo_pwm:u0|ctr[10] ;
+; pwm_test:pwm_inst|servo_pwm:u3|ctr[10]            ; Merged with pwm_test:pwm_inst|servo_pwm:u0|ctr[10] ;
+; pwm_test:pwm_inst|servo_pwm:u4|ctr[10]            ; Merged with pwm_test:pwm_inst|servo_pwm:u0|ctr[10] ;
+; pwm_test:pwm_inst|servo_pwm:u1|ctr[9]             ; Merged with pwm_test:pwm_inst|servo_pwm:u0|ctr[9]  ;
+; pwm_test:pwm_inst|servo_pwm:u2|ctr[9]             ; Merged with pwm_test:pwm_inst|servo_pwm:u0|ctr[9]  ;
+; pwm_test:pwm_inst|servo_pwm:u3|ctr[9]             ; Merged with pwm_test:pwm_inst|servo_pwm:u0|ctr[9]  ;
+; pwm_test:pwm_inst|servo_pwm:u4|ctr[9]             ; Merged with pwm_test:pwm_inst|servo_pwm:u0|ctr[9]  ;
+; pwm_test:pwm_inst|servo_pwm:u1|ctr[8]             ; Merged with pwm_test:pwm_inst|servo_pwm:u0|ctr[8]  ;
+; pwm_test:pwm_inst|servo_pwm:u2|ctr[8]             ; Merged with pwm_test:pwm_inst|servo_pwm:u0|ctr[8]  ;
+; pwm_test:pwm_inst|servo_pwm:u3|ctr[8]             ; Merged with pwm_test:pwm_inst|servo_pwm:u0|ctr[8]  ;
+; pwm_test:pwm_inst|servo_pwm:u4|ctr[8]             ; Merged with pwm_test:pwm_inst|servo_pwm:u0|ctr[8]  ;
+; pwm_test:pwm_inst|servo_pwm:u1|ctr[7]             ; Merged with pwm_test:pwm_inst|servo_pwm:u0|ctr[7]  ;
+; pwm_test:pwm_inst|servo_pwm:u2|ctr[7]             ; Merged with pwm_test:pwm_inst|servo_pwm:u0|ctr[7]  ;
+; pwm_test:pwm_inst|servo_pwm:u3|ctr[7]             ; Merged with pwm_test:pwm_inst|servo_pwm:u0|ctr[7]  ;
+; pwm_test:pwm_inst|servo_pwm:u4|ctr[7]             ; Merged with pwm_test:pwm_inst|servo_pwm:u0|ctr[7]  ;
+; pwm_test:pwm_inst|servo_pwm:u1|ctr[6]             ; Merged with pwm_test:pwm_inst|servo_pwm:u0|ctr[6]  ;
+; pwm_test:pwm_inst|servo_pwm:u2|ctr[6]             ; Merged with pwm_test:pwm_inst|servo_pwm:u0|ctr[6]  ;
+; pwm_test:pwm_inst|servo_pwm:u3|ctr[6]             ; Merged with pwm_test:pwm_inst|servo_pwm:u0|ctr[6]  ;
+; pwm_test:pwm_inst|servo_pwm:u4|ctr[6]             ; Merged with pwm_test:pwm_inst|servo_pwm:u0|ctr[6]  ;
+; pwm_test:pwm_inst|servo_pwm:u1|ctr[5]             ; Merged with pwm_test:pwm_inst|servo_pwm:u0|ctr[5]  ;
+; pwm_test:pwm_inst|servo_pwm:u2|ctr[5]             ; Merged with pwm_test:pwm_inst|servo_pwm:u0|ctr[5]  ;
+; pwm_test:pwm_inst|servo_pwm:u3|ctr[5]             ; Merged with pwm_test:pwm_inst|servo_pwm:u0|ctr[5]  ;
+; pwm_test:pwm_inst|servo_pwm:u4|ctr[5]             ; Merged with pwm_test:pwm_inst|servo_pwm:u0|ctr[5]  ;
+; pwm_test:pwm_inst|servo_pwm:u1|ctr[4]             ; Merged with pwm_test:pwm_inst|servo_pwm:u0|ctr[4]  ;
+; pwm_test:pwm_inst|servo_pwm:u2|ctr[4]             ; Merged with pwm_test:pwm_inst|servo_pwm:u0|ctr[4]  ;
+; pwm_test:pwm_inst|servo_pwm:u3|ctr[4]             ; Merged with pwm_test:pwm_inst|servo_pwm:u0|ctr[4]  ;
+; pwm_test:pwm_inst|servo_pwm:u4|ctr[4]             ; Merged with pwm_test:pwm_inst|servo_pwm:u0|ctr[4]  ;
+; pwm_test:pwm_inst|servo_pwm:u1|ctr[3]             ; Merged with pwm_test:pwm_inst|servo_pwm:u0|ctr[3]  ;
+; pwm_test:pwm_inst|servo_pwm:u2|ctr[3]             ; Merged with pwm_test:pwm_inst|servo_pwm:u0|ctr[3]  ;
+; pwm_test:pwm_inst|servo_pwm:u3|ctr[3]             ; Merged with pwm_test:pwm_inst|servo_pwm:u0|ctr[3]  ;
+; pwm_test:pwm_inst|servo_pwm:u4|ctr[3]             ; Merged with pwm_test:pwm_inst|servo_pwm:u0|ctr[3]  ;
+; pwm_test:pwm_inst|servo_pwm:u1|ctr[2]             ; Merged with pwm_test:pwm_inst|servo_pwm:u0|ctr[2]  ;
+; pwm_test:pwm_inst|servo_pwm:u2|ctr[2]             ; Merged with pwm_test:pwm_inst|servo_pwm:u0|ctr[2]  ;
+; pwm_test:pwm_inst|servo_pwm:u3|ctr[2]             ; Merged with pwm_test:pwm_inst|servo_pwm:u0|ctr[2]  ;
+; pwm_test:pwm_inst|servo_pwm:u4|ctr[2]             ; Merged with pwm_test:pwm_inst|servo_pwm:u0|ctr[2]  ;
+; pwm_test:pwm_inst|servo_pwm:u1|ctr[1]             ; Merged with pwm_test:pwm_inst|servo_pwm:u0|ctr[1]  ;
+; pwm_test:pwm_inst|servo_pwm:u2|ctr[1]             ; Merged with pwm_test:pwm_inst|servo_pwm:u0|ctr[1]  ;
+; pwm_test:pwm_inst|servo_pwm:u3|ctr[1]             ; Merged with pwm_test:pwm_inst|servo_pwm:u0|ctr[1]  ;
+; pwm_test:pwm_inst|servo_pwm:u4|ctr[1]             ; Merged with pwm_test:pwm_inst|servo_pwm:u0|ctr[1]  ;
+; pwm_test:pwm_inst|servo_pwm:u1|ctr[0]             ; Merged with pwm_test:pwm_inst|servo_pwm:u0|ctr[0]  ;
+; pwm_test:pwm_inst|servo_pwm:u2|ctr[0]             ; Merged with pwm_test:pwm_inst|servo_pwm:u0|ctr[0]  ;
+; pwm_test:pwm_inst|servo_pwm:u3|ctr[0]             ; Merged with pwm_test:pwm_inst|servo_pwm:u0|ctr[0]  ;
+; pwm_test:pwm_inst|servo_pwm:u4|ctr[0]             ; Merged with pwm_test:pwm_inst|servo_pwm:u0|ctr[0]  ;
+; Total Number of Removed Registers = 178           ;                                                    ;
++---------------------------------------------------+----------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -223,12 +389,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 43    ;
-; Number of registers using Synchronous Clear  ; 20    ;
+; Total registers                              ; 187   ;
+; Number of registers using Synchronous Clear  ; 32    ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 18    ;
+; Number of registers using Clock Enable       ; 15    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -238,33 +404,92 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------+---------+
 ; Inverted Register                      ; Fan out ;
 +----------------------------------------+---------+
-; pwm_test:pwm_inst|high_time[14]        ; 5       ;
-; pwm_test:pwm_inst|high_time[15]        ; 5       ;
-; pwm_test:pwm_inst|high_time[6]         ; 4       ;
-; pwm_test:pwm_inst|high_time[4]         ; 3       ;
-; pwm_test:pwm_inst|high_time[8]         ; 6       ;
-; pwm_test:pwm_inst|high_time[9]         ; 6       ;
-; Total number of inverted registers = 6 ;         ;
+; pwm_test:pwm_inst|width_us[4]          ; 6       ;
+; pwm_test:pwm_inst|width_us[3]          ; 5       ;
+; pwm_test:pwm_inst|width_us[2]          ; 4       ;
+; pwm_test:pwm_inst|width_us[10]         ; 7       ;
+; pwm_test:pwm_inst|width_us[6]          ; 3       ;
+; pwm_test:pwm_inst|width_us[7]          ; 3       ;
+; pwm_test:pwm_inst|width_us[8]          ; 3       ;
+; pwm_test:pwm_inst|dir                  ; 17      ;
+; Total number of inverted registers = 8 ;         ;
 +----------------------------------------+---------+
 
 
-+----------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: pwm_test:pwm_inst ;
-+----------------+---------+-------------------------------------+
-; Parameter Name ; Value   ; Type                                ;
-+----------------+---------+-------------------------------------+
-; PWM_PERIOD     ; 1000000 ; Signed Integer                      ;
-+----------------+---------+-------------------------------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                              ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                    ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------+
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |FPGA_Bionic_Robot_Arm|pwm_test:pwm_inst|width_us[1]          ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |FPGA_Bionic_Robot_Arm|pwm_test:pwm_inst|width_us[8]          ;
+; 3:1                ; 15 bits   ; 30 LEs        ; 30 LEs               ; 0 LEs                  ; No         ; |FPGA_Bionic_Robot_Arm|pwm_test:pwm_inst|servo_pwm:u0|w_us[3] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: pwm_test:pwm_inst|servo_pwm:u0 ;
++----------------+----------+-------------------------------------------------+
+; Parameter Name ; Value    ; Type                                            ;
++----------------+----------+-------------------------------------------------+
+; CLK_HZ         ; 50000000 ; Signed Integer                                  ;
+; FRAME_US       ; 20000    ; Signed Integer                                  ;
+; MIN_US         ; 1000     ; Signed Integer                                  ;
+; MAX_US         ; 2000     ; Signed Integer                                  ;
++----------------+----------+-------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "pwm_test:pwm_inst"                                                                                            ;
-+-----------+--------+----------+----------------------------------------------------------------------------------------------------------+
-; Port      ; Type   ; Severity ; Details                                                                                                  ;
-+-----------+--------+----------+----------------------------------------------------------------------------------------------------------+
-; blink_led ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
-+-----------+--------+----------+----------------------------------------------------------------------------------------------------------+
++-----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: pwm_test:pwm_inst|servo_pwm:u1 ;
++----------------+----------+-------------------------------------------------+
+; Parameter Name ; Value    ; Type                                            ;
++----------------+----------+-------------------------------------------------+
+; CLK_HZ         ; 50000000 ; Signed Integer                                  ;
+; FRAME_US       ; 20000    ; Signed Integer                                  ;
+; MIN_US         ; 1000     ; Signed Integer                                  ;
+; MAX_US         ; 2000     ; Signed Integer                                  ;
++----------------+----------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: pwm_test:pwm_inst|servo_pwm:u2 ;
++----------------+----------+-------------------------------------------------+
+; Parameter Name ; Value    ; Type                                            ;
++----------------+----------+-------------------------------------------------+
+; CLK_HZ         ; 50000000 ; Signed Integer                                  ;
+; FRAME_US       ; 20000    ; Signed Integer                                  ;
+; MIN_US         ; 1000     ; Signed Integer                                  ;
+; MAX_US         ; 2000     ; Signed Integer                                  ;
++----------------+----------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: pwm_test:pwm_inst|servo_pwm:u3 ;
++----------------+----------+-------------------------------------------------+
+; Parameter Name ; Value    ; Type                                            ;
++----------------+----------+-------------------------------------------------+
+; CLK_HZ         ; 50000000 ; Signed Integer                                  ;
+; FRAME_US       ; 20000    ; Signed Integer                                  ;
+; MIN_US         ; 1000     ; Signed Integer                                  ;
+; MAX_US         ; 2000     ; Signed Integer                                  ;
++----------------+----------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: pwm_test:pwm_inst|servo_pwm:u4 ;
++----------------+----------+-------------------------------------------------+
+; Parameter Name ; Value    ; Type                                            ;
++----------------+----------+-------------------------------------------------+
+; CLK_HZ         ; 50000000 ; Signed Integer                                  ;
+; FRAME_US       ; 20000    ; Signed Integer                                  ;
+; MIN_US         ; 1000     ; Signed Integer                                  ;
+; MAX_US         ; 2000     ; Signed Integer                                  ;
++----------------+----------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +-----------------------------------------------------+
@@ -272,24 +497,26 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 43                          ;
-;     ENA               ; 18                          ;
-;     SCLR              ; 20                          ;
-;     plain             ; 5                           ;
-; arriav_lcell_comb     ; 71                          ;
-;     arith             ; 37                          ;
-;         1 data inputs ; 21                          ;
-;         2 data inputs ; 16                          ;
-;     normal            ; 34                          ;
-;         1 data inputs ; 7                           ;
-;         2 data inputs ; 2                           ;
-;         4 data inputs ; 5                           ;
-;         5 data inputs ; 8                           ;
-;         6 data inputs ; 12                          ;
+; arriav_ff             ; 187                         ;
+;     ENA               ; 15                          ;
+;     SCLR              ; 32                          ;
+;     plain             ; 140                         ;
+; arriav_lcell_comb     ; 227                         ;
+;     arith             ; 70                          ;
+;         1 data inputs ; 55                          ;
+;         2 data inputs ; 15                          ;
+;     normal            ; 157                         ;
+;         1 data inputs ; 8                           ;
+;         2 data inputs ; 28                          ;
+;         3 data inputs ; 2                           ;
+;         4 data inputs ; 22                          ;
+;         5 data inputs ; 27                          ;
+;         6 data inputs ; 70                          ;
+; arriav_mac            ; 5                           ;
 ; boundary_port         ; 6                           ;
 ;                       ;                             ;
-; Max LUT depth         ; 4.00                        ;
-; Average LUT depth     ; 2.76                        ;
+; Max LUT depth         ; 4.10                        ;
+; Average LUT depth     ; 2.61                        ;
 +-----------------------+-----------------------------+
 
 
@@ -308,32 +535,37 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 16.1.2 Build 203 01/18/2017 SJ Lite Edition
-    Info: Processing started: Tue Aug 05 22:23:26 2025
+    Info: Processing started: Sun Aug 10 01:12:59 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off FPGA_Bionic_Robot_Arm -c FPGA_Bionic_Robot_Arm
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 14 of the 14 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file servo_pwm.v
+    Info (12023): Found entity 1: servo_pwm File: C:/Users/renew/Downloads/vscode/FPGA-Bionic-Robot-Arm/FPGA_Bionic_Robot_Arm/servo_pwm.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file pwm_test.v
-    Info (12023): Found entity 1: pwm_test File: C:/Users/renew/Downloads/vscode/FPGA-Bionic-Robot-Arm/FPGA_Bionic_Robot_Arm/pwm_test.v Line: 1
+    Info (12023): Found entity 1: pwm_test File: C:/Users/renew/Downloads/vscode/FPGA-Bionic-Robot-Arm/FPGA_Bionic_Robot_Arm/pwm_test.v Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file fpga_bionic_robot_arm.v
     Info (12023): Found entity 1: FPGA_Bionic_Robot_Arm File: C:/Users/renew/Downloads/vscode/FPGA-Bionic-Robot-Arm/FPGA_Bionic_Robot_Arm/FPGA_Bionic_Robot_Arm.v Line: 1
 Info (12127): Elaborating entity "FPGA_Bionic_Robot_Arm" for the top level hierarchy
-Info (12128): Elaborating entity "pwm_test" for hierarchy "pwm_test:pwm_inst" File: C:/Users/renew/Downloads/vscode/FPGA-Bionic-Robot-Arm/FPGA_Bionic_Robot_Arm/FPGA_Bionic_Robot_Arm.v Line: 15
-Warning (10230): Verilog HDL assignment warning at pwm_test.v(18): truncated value with size 32 to match size of target (25) File: C:/Users/renew/Downloads/vscode/FPGA-Bionic-Robot-Arm/FPGA_Bionic_Robot_Arm/pwm_test.v Line: 18
-Warning (10230): Verilog HDL assignment warning at pwm_test.v(20): truncated value with size 32 to match size of target (20) File: C:/Users/renew/Downloads/vscode/FPGA-Bionic-Robot-Arm/FPGA_Bionic_Robot_Arm/pwm_test.v Line: 20
-Warning (10230): Verilog HDL assignment warning at pwm_test.v(31): truncated value with size 32 to match size of target (20) File: C:/Users/renew/Downloads/vscode/FPGA-Bionic-Robot-Arm/FPGA_Bionic_Robot_Arm/pwm_test.v Line: 31
-Warning (10230): Verilog HDL assignment warning at pwm_test.v(33): truncated value with size 32 to match size of target (20) File: C:/Users/renew/Downloads/vscode/FPGA-Bionic-Robot-Arm/FPGA_Bionic_Robot_Arm/pwm_test.v Line: 33
-Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info (12128): Elaborating entity "pwm_test" for hierarchy "pwm_test:pwm_inst" File: C:/Users/renew/Downloads/vscode/FPGA-Bionic-Robot-Arm/FPGA_Bionic_Robot_Arm/FPGA_Bionic_Robot_Arm.v Line: 14
+Warning (10230): Verilog HDL assignment warning at pwm_test.v(8): truncated value with size 32 to match size of target (24) File: C:/Users/renew/Downloads/vscode/FPGA-Bionic-Robot-Arm/FPGA_Bionic_Robot_Arm/pwm_test.v Line: 8
+Warning (10230): Verilog HDL assignment warning at pwm_test.v(20): truncated value with size 32 to match size of target (16) File: C:/Users/renew/Downloads/vscode/FPGA-Bionic-Robot-Arm/FPGA_Bionic_Robot_Arm/pwm_test.v Line: 20
+Warning (10230): Verilog HDL assignment warning at pwm_test.v(26): truncated value with size 32 to match size of target (16) File: C:/Users/renew/Downloads/vscode/FPGA-Bionic-Robot-Arm/FPGA_Bionic_Robot_Arm/pwm_test.v Line: 26
+Info (12128): Elaborating entity "servo_pwm" for hierarchy "pwm_test:pwm_inst|servo_pwm:u0" File: C:/Users/renew/Downloads/vscode/FPGA-Bionic-Robot-Arm/FPGA_Bionic_Robot_Arm/pwm_test.v Line: 32
+Warning (10230): Verilog HDL assignment warning at servo_pwm.v(17): truncated value with size 32 to match size of target (16) File: C:/Users/renew/Downloads/vscode/FPGA-Bionic-Robot-Arm/FPGA_Bionic_Robot_Arm/servo_pwm.v Line: 17
+Warning (12011): Net is missing source, defaulting to GND
+    Warning (12110): Net "pwm_test:pwm_inst|width_us[0]" is missing source, defaulting to GND File: C:/Users/renew/Downloads/vscode/FPGA-Bionic-Robot-Arm/FPGA_Bionic_Robot_Arm/pwm_test.v Line: 13
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 82 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 348 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 1 input pins
     Info (21059): Implemented 5 output pins
-    Info (21061): Implemented 76 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 4892 megabytes
-    Info: Processing ended: Tue Aug 05 22:23:36 2025
-    Info: Elapsed time: 00:00:10
-    Info: Total CPU time (on all processors): 00:00:22
+    Info (21061): Implemented 337 logic cells
+    Info (21062): Implemented 5 DSP elements
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 7 warnings
+    Info: Peak virtual memory: 4885 megabytes
+    Info: Processing ended: Sun Aug 10 01:13:10 2025
+    Info: Elapsed time: 00:00:11
+    Info: Total CPU time (on all processors): 00:00:21
 
 

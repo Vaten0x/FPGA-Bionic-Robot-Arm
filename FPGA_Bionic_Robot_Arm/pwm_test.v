@@ -1,42 +1,38 @@
+// Generates 5 PWM signals for hobby servos (50 Hz, 1.0–2.0 ms pulses)
 module pwm_test (
-    input clk,
-    output reg [4:0] pwm_out,
-    output blink_led        // <-- Connect this in Pin Planner to an onboard LED
+    input  wire       clk,       // 50 MHz clock
+    output wire [4:0] pwm_out
 );
+    // slow tick for width updates (~200 Hz)
+    reg [23:0] slow = 0;
+    always @(posedge clk) slow <= slow + 1;
+    wire tick = (slow == 24'd0);
 
-    reg [19:0] counter = 0;
-    reg [19:0] high_time = 50000;  // Start at 1ms
-    reg direction = 0;             // 0: increasing, 1: decreasing
+    // sweep width between 1000us and 2000us
+    reg dir = 1'b1;
+    reg [15:0] width_us = 16'd1500;
 
-    parameter PWM_PERIOD = 1000000;  // 20ms @ 50MHz
-
-    // Simple blink counter for debugging
-    reg [24:0] blink_counter = 0;
-    assign blink_led = blink_counter[24];  // Toggles ~every 0.67s
-
-    always @(posedge clk) begin
-        blink_counter <= blink_counter + 1;
-
-        counter <= (counter == PWM_PERIOD) ? 0 : counter + 1;
-
-        // Generate PWM
-        if (counter < high_time)
-            pwm_out <= 5'b11111;
-        else
-            pwm_out <= 5'b00000;
-
-        // Update high_time every 20ms (at counter reset)
-        if (counter == PWM_PERIOD) begin
-            if (!direction)
-                high_time <= high_time + 1000; // step +1000 cycles = +20us
-            else
-                high_time <= high_time - 1000;
-
-            // Reverse direction at bounds
-            if (high_time >= 100000)
-                direction <= 1;
-            else if (high_time <= 50000)
-                direction <= 0;
+    always @(posedge clk) if (tick) begin
+        if (dir) begin
+            if (width_us >= 16'd2000) begin
+                dir <= 1'b0;
+            end else begin
+                width_us <= width_us + 10;
+            end
+        end else begin
+            if (width_us <= 16'd1000) begin
+                dir <= 1'b1;
+            end else begin
+                width_us <= width_us - 10;
+            end
         end
     end
+
+    // instantiate 5 servo PWM generators
+    servo_pwm u0 (.clk(clk), .width_us(width_us), .pwm(pwm_out[0]));
+    servo_pwm u1 (.clk(clk), .width_us(width_us), .pwm(pwm_out[1]));
+    servo_pwm u2 (.clk(clk), .width_us(width_us), .pwm(pwm_out[2]));
+    servo_pwm u3 (.clk(clk), .width_us(width_us), .pwm(pwm_out[3]));
+    servo_pwm u4 (.clk(clk), .width_us(width_us), .pwm(pwm_out[4]));
+
 endmodule

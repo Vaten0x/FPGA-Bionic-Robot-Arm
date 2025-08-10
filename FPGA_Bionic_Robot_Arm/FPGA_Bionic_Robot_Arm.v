@@ -1,12 +1,11 @@
 module FPGA_Bionic_Robot_Arm (
-    input CLOCK_50,
+    input  CLOCK_50,
     output pwm1,
     output pwm2,
     output pwm3,
     output pwm4,
     output pwm5
 );
-
     wire [4:0] pwm;
 
     pwm_test pwm_inst (

@@ -1,14 +1,14 @@
-Analysis & Synthesis Status : Successful - Tue Aug 05 22:23:35 2025
+Analysis & Synthesis Status : Successful - Sun Aug 10 01:13:10 2025
 Quartus Prime Version : 16.1.2 Build 203 01/18/2017 SJ Lite Edition
 Revision Name : FPGA_Bionic_Robot_Arm
 Top-level Entity Name : FPGA_Bionic_Robot_Arm
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 43
+Total registers : 187
 Total pins : 6
 Total virtual pins : 0
 Total block memory bits : 0
-Total DSP Blocks : 0
+Total DSP Blocks : 5
 Total HSSI RX PCSs : 0
 Total HSSI PMA RX Deserializers : 0
 Total HSSI TX PCSs : 0
