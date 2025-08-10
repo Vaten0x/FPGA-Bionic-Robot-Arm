@@ -36,6 +36,10 @@ This project implements a fully 3D-printed robotic hand controlled by an FPGA (D
     <img src="images/building_arm/image6.jpg" alt="Finger Prototype with string wiring" width="300" style="margin:5px;">
     <img src="images/building_arm/image7.jpg" alt="3D Print Design in InMoov website" width="300" style="margin:5px;">
     <img src="images/building_arm/image8.jpg" alt="Soldering the fingertip for sensor" width="300" style="margin:5px;">
+   <img src="images/building_arm/image9.jpg" alt="Inside Robot Arm" width="300" style="margin:5px;">
+   <img src="images/building_arm/image10.jpg" alt="Setting up everything" width="300" style="margin:5px;">
+   <img src="images/building_arm/image11.jpg" alt="Closeup of fingertip for copper plate" width="300" style="margin:5px;">
+   <img src="images/building_arm/image12.jpg" alt="Wiring with PCA9685" width="300" style="margin:5px;">
   </p>
 </details>
 
@@ -51,7 +55,7 @@ This project implements a fully 3D-printed robotic hand controlled by an FPGA (D
 <details>
   <summary>Robot Arm with FPGA Integration</summary>
   <p>
-    <img src="images/build-1.jpg" alt="Build step 1" width="300" style="margin:5px;">
+    <img src="images/FPGA_integration/image0.jpg" alt="Build step 1" width="300" style="margin:5px;">
   </p>
 </details>
 
