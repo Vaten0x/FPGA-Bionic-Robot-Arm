@@ -29,6 +29,12 @@ This project implements a fully 3D-printed robotic hand controlled by an FPGA (D
 
 ### Images
 
+Images of building the arm
+
+Images of testing the arm with Raspberry Pi + PCA9685 Driver
+
+Images of the arm with DE1-SOC 
+
 ![3d Printed Parts](images/image1.jpg)
 ![Assembling in process](images/image2.jpg)
 ![Soldering for sensor on fingertip](images/image3.jpg)
