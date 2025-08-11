@@ -47,7 +47,6 @@ This project implements a fully 3D-printed robotic hand controlled by an FPGA (D
     <img src="images/testing_arm/image2.jpg" alt="Wiring with PCA9685" width="400" style="margin:5px;">
     <img src="images/testing_arm/image3.jpg" alt="Final Product" width="400" style="margin:5px;">
     <img src="images/testing_arm/testing_diagram.jpg" alt="Pi + PCA9685 Integration Diagram" style="margin:5px;">
-    //link to video 
     <a href="https://youtu.be/FcC7a2nn-p4">Watch the testing video here</a>
   </p>
 </details>
