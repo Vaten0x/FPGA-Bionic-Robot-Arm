@@ -28,27 +28,27 @@ This project implements a fully 3D-printed robotic hand controlled by an FPGA (D
 <details>
   <summary>Building the Robot Arm</summary>
   <p>
-    <img src="images/building_arm/image1.jpg" alt="3D Printed Parts" width="300" style="margin:5px;">
-    <img src="images/building_arm/image2.jpg" alt="Assembling in process" width="300" style="margin:5px;">
-    <img src="images/building_arm/image3.jpg" alt="Soldering for sensor on fingertip" width="300" style="margin:5px;">
-    <img src="images/building_arm/image4.jpg" alt="Final Product" width="300" style="margin:5px;">
-    <img src="images/building_arm/image5.jpg" alt="3D-printed FingerTips" width="300" style="margin:5px;">
-    <img src="images/building_arm/image6.jpg" alt="Finger Prototype with string wiring" width="300" style="margin:5px;">
-    <img src="images/building_arm/image7.jpg" alt="3D Print Design in InMoov website" width="300" style="margin:5px;">
-    <img src="images/building_arm/image8.jpg" alt="Soldering the fingertip for sensor" width="300" style="margin:5px;">
-   <img src="images/building_arm/image9.jpg" alt="Inside Robot Arm" width="300" style="margin:5px;">
-   <img src="images/building_arm/image10.jpg" alt="Setting up everything" width="300" style="margin:5px;">
-   <img src="images/building_arm/image11.jpg" alt="Closeup of fingertip for copper plate" width="300" style="margin:5px;">
-   <img src="images/building_arm/image12.jpg" alt="Wiring with PCA9685" width="300" style="margin:5px;">
+    <img src="images/building_arm/image1.jpg" alt="3D Printed Parts" width="400" style="margin:5px;">
+    <img src="images/building_arm/image2.jpg" alt="Assembling in process" width="400" style="margin:5px;">
+    <img src="images/building_arm/image3.jpg" alt="Soldering for sensor on fingertip" width="400" style="margin:5px;">
+    <img src="images/building_arm/image4.jpg" alt="Final Product" width="400" style="margin:5px;">
+    <img src="images/building_arm/image5.jpg" alt="3D-printed FingerTips" width="400" style="margin:5px;">
+    <img src="images/building_arm/image6.jpg" alt="Finger Prototype with string wiring" width="400" style="margin:5px;">
+    <img src="images/building_arm/image7.jpg" alt="3D Print Design in InMoov website" width="400" style="margin:5px;">
+    <img src="images/building_arm/image8.jpg" alt="Soldering the fingertip for sensor" width="400" style="margin:5px;">
+   <img src="images/building_arm/image9.jpg" alt="Inside Robot Arm" width="40" style="margin:5px;">
+   <img src="images/building_arm/image10.jpg" alt="Setting up everything" width="40" style="margin:5px;">
+   <img src="images/building_arm/image11.jpg" alt="Closeup of fingertip for copper plate" width="40" style="margin:5px;">
+   <img src="images/building_arm/image12.jpg" alt="Wiring with PCA9685" width="40" style="margin:5px;">
   </p>
 </details>
 
 <details>
   <summary>Testing Arm with Raspberry Pi and PCA9685 Driver</summary>
   <p>
-    <img src="images/testing_arm/testing_diagram.jpg" alt="Pi + PCA9685 Integration Diagram" width="300" style="margin:5px;">
-    <img src="images/testing_arm/image0.jpg" alt="Testing with Raspberry Pi" width="300" style="margin:5px;">
-    <img src="images/testing_arm/image1.jpg" alt="Testing with PCA9685 Driver" width="300" style="margin:5px;">
+    <img src="images/testing_arm/testing_diagram.jpg" alt="Pi + PCA9685 Integration Diagram" width="400" style="margin:5px;">
+    <img src="images/testing_arm/image0.jpg" alt="Testing with Raspberry Pi" width="400" style="margin:5px;">
+    <img src="images/testing_arm/image1.jpg" alt="Testing with PCA9685 Driver" width="400" style="margin:5px;">
     <video src="images/testing_arm/video0.mp4" controls style="margin:5px;">
       Your browser does not support the video tag.
   </p>
@@ -57,7 +57,7 @@ This project implements a fully 3D-printed robotic hand controlled by an FPGA (D
 <details>
   <summary>Robot Arm with FPGA Integration</summary>
   <p>
-    <img src="images/FPGA_integration/image0.jpg" alt="Build step 1" width="300" style="margin:5px;">
+    <img src="images/FPGA_integration/image0.jpg" alt="Build step 1" width="400" style="margin:5px;">
   </p>
 </details>
 
