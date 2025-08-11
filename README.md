@@ -23,7 +23,7 @@ This project implements a fully 3D-printed robotic hand controlled by an FPGA (D
 
 ## Demonstration
 
-### Images
+### Images & Videos
 
 <details>
   <summary>Building the Robot Arm</summary>
@@ -49,6 +49,8 @@ This project implements a fully 3D-printed robotic hand controlled by an FPGA (D
     <img src="images/testing_arm/testing_diagram.jpg" alt="Pi + PCA9685 Integration Diagram" width="300" style="margin:5px;">
     <img src="images/testing_arm/image0.jpg" alt="Testing with Raspberry Pi" width="300" style="margin:5px;">
     <img src="images/testing_arm/image1.jpg" alt="Testing with PCA9685 Driver" width="300" style="margin:5px;">
+    <video src="images/testing_arm/video0.mp4" controls style="margin:5px;">
+      Your browser does not support the video tag.
   </p>
 </details>
 
