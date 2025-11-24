@@ -62,7 +62,7 @@ Synthesis: Quartus (for DE1-SoC)
 
   So I thought I needed more power so I bought lithium ion batteries but found that these are pretty dangerous. (Check 1st Picture) I didn't understand the cable out of it too. I ended up just returning this.
 
-  After reading the specification with this servo, I needed more current, specifically 5V 20A 100W. I got a Converter Adapter that matches exactly what I needed. 
+  After reading the specification with this [servo](https://hobbyking.com/en_us/hobbykingtm-hk15298-high-voltage-coreless-digital-servo-mg-bb-15kg-0-11sec-66g.html?___store=en_us), I needed more current, specifically 5V 20A 100W. I got a Converter Adapter that matches exactly what I needed. 
 
   The next steps was just to create python scripts on Raspberry Pi I had sitting at home to test the servo motors. This was so much easier to do.
 
