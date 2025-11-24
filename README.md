@@ -8,6 +8,17 @@ This project implements a fully 3D-printed robotic hand controlled by an FPGA (D
 
 **TODO:** Put video here
 
+## Hardware Tools
+
+Simulation: VCS (runs UVM testbenches) - Currently waiting for access
+
+Debug: Verdi (waveform viewer) - Currently waiting for access
+
+Verification: UVM
+
+Synthesis: Quartus (for DE1-SoC)
+
+
 ## Hardware Components
 
 - **DE1-SoC FPGA Development Board (Cyclone V Soc Altera)**: Acts as the main controller, generating PWM signals in Verilog for each servo motor based on microcoded instruction decoding.
