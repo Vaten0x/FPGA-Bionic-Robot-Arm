@@ -1,4 +1,4 @@
-// Generates 5 PWM signals for hobby servos (50 Hz, 1.0–2.0 ms pulse width)
+// Generates 5 PWM signals for hobby servos (50 Hz, 1000us to 2000us pulse width)
 module pwm_test (
     input  wire       clk,       // 50 MHz clock
     output wire [4:0] pwm_out
