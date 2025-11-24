@@ -4,3 +4,4 @@ output_files/
 *_pin_model_dump.txt
 *.qsf
 *.qws
+*.bak
