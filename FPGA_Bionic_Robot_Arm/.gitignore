@@ -1,4 +1,6 @@
-db
-incremental_db
+db/
+incremental_db/
 output_files/
 *_pin_model_dump.txt
+*.qsf
+*.qws

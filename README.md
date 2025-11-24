@@ -2,7 +2,7 @@
 
 ## Overview
 
-This project implements a fully 3D-printed robotic hand controlled by an FPGA (DE1-SoC) using Verilog. The system decodes microcoded gesture instructions and sends PWM signals to five servo motors that control finger movement. Unlike conventional microcontroller-based control, this setup demonstrates how low-level digital logic and hardware description languages can directly control physical systems, a strong demonstration of computer architecture and embedded design.
+This project implements a bionic robot hand controlled by an FPGA (DE1-SoC) using System Verilog.
 
 ## Video
 
