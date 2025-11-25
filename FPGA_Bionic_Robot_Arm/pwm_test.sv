@@ -13,6 +13,13 @@ module pwm_test (
     reg dir = 1'b1;
     reg [15:0] width_us = 16'd1500;
 
+    seven_segment_display seven_seg_instance (
+        .clk(clk),
+        .tick(tick),
+        .input(width_us),
+        .seven_seg_display(seven_seg_display)
+    );
+
     always @(posedge clk) if (tick) begin
         if (dir) begin
             if (width_us >= 16'd2000) begin
