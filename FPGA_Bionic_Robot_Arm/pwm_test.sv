@@ -1,7 +1,7 @@
 // Generates 5 PWM signals for hobby servos (50 Hz, 1000us to 2000us pulse width) in a slow clock
 module pwm_test (
     input  wire       clk,       // 50 MHz clock
-    output wire [3:0][6:0] seven_seg_display, //TODO: use this to display the width_us for each posedge clk
+    output wire [3:0][6:0] seven_seg_display,
     output wire [4:0] pwm_out
 );
     // slow tick for width updates (~200 Hz)
@@ -16,7 +16,7 @@ module pwm_test (
     seven_segment_display seven_seg_instance (
         .clk(clk),
         .tick(tick),
-        .input(width_us),
+        .width_input(width_us),
         .seven_seg_display(seven_seg_display)
     );
 
