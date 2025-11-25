@@ -21,7 +21,7 @@ Synthesis: Quartus (for DE1-SoC)
 
 ## Hardware Components
 
-- **DE1-SoC FPGA Development Board (Cyclone V Soc Altera)**: Acts as the main controller, generating PWM signals in Verilog for each servo motor based on microcoded instruction decoding.
+- **[DE1-SoC FPGA Development Board (Cyclone V Soc Altera)](http://www.ee.ic.ac.uk/pcheung/teaching/ee2_digital/de1-soc_user_manual.pdf)**: Acts as the main controller, generating PWM signals in Verilog for each servo motor based on microcoded instruction decoding.
 - **[5V 30A 150W Power Supply](https://www.amazon.ca/gp/product/B07Q2VPPL1/ref=ox_sc_act_title_1?smid=A30R8HAL0CY1G4)**: Provides regulated power directly to all five servo motors to prevent brownouts and overheating during high torque loads.
 - **[HK-15298 Servo Motors](https://hobbyking.com/en_us/hobbykingtm-hk15298-high-voltage-coreless-digital-servo-mg-bb-15kg-0-11sec-66g.html)**: Five servo motors drive the fingers of the robotic hand. (An additional wrist motor is included in hardware but unused in this prototype)
 - **[3D-Printed Robotic Hand](https://inmoov.fr/hand-i2/)**: Designed based on the InMoov open-source hand project.
