@@ -10,7 +10,7 @@ module pwm_test (
     wire tick = (slow == 24'd0);
 
     // sweep width between 1000us and 2000us
-    reg dir = 1'b1;
+    reg direction = 1'b1; // 1 means up, 0 means down
     reg [15:0] width_us = 16'd1500;
 
     seven_segment_display seven_seg_instance (
@@ -21,15 +21,15 @@ module pwm_test (
     );
 
     always @(posedge clk) if (tick) begin
-        if (dir) begin
+        if (direction) begin
             if (width_us >= 16'd2000) begin
-                dir <= 1'b0;
+                direction <= 1'b0;
             end else begin
                 width_us <= width_us + 10;
             end
         end else begin
             if (width_us <= 16'd1000) begin
-                dir <= 1'b1;
+                direction <= 1'b1;
             end else begin
                 width_us <= width_us - 10;
             end

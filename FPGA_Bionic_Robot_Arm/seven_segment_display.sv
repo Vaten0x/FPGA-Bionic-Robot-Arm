@@ -7,7 +7,7 @@ module seven_segment_display #(
     input wire clk,
     input wire tick,
     input wire [15:0] width_input,
-    output wire [3:0][6:0] seven_seg_display
+    output reg [3:0][6:0] seven_seg_display
 );
     // truncate anything over for 16-bit decimal value for 9999
     wire [15:0] clamped_input = (width_input > max_value) ? 4'd9999 : width_input;
