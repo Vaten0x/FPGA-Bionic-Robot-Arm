@@ -10,14 +10,32 @@ This project implements a bionic robot hand controlled by an FPGA (DE1-SoC) usin
 
 ## Hardware Tools
 
-Simulation: VCS (runs UVM testbenches)
+Simulation: Synopsys VCS
 
-Debug: Verdi (waveform viewer)
+Waveform Debugger: Verdi
 
 Verification: UVM
 
 Synthesis: Quartus (for DE1-SoC)
 
+## To Compile & Simulate with Synopsys VCS
+
+First cd into the root directory of the project
+
+```bash
+cd FPGA_Bionic_Robot_Arm
+```
+
+Then run the following command to compile and simulate
+
+```bash
+vcs -sverilog -full64 \
+    FPGA_Bionic_Robot_Arm.sv \
+    pwm_test.sv \
+    servo_pwm.sv \
+    seven_segment_display.sv \
+    -R
+```
 
 ## Hardware Components
 

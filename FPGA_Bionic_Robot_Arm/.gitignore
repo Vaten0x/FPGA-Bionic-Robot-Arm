@@ -1,7 +1,15 @@
+# VCS generated files
+
+*simv.daidir/
+*_pin_model_dump.txt
+
+# Verdi generated files
+verdiLog/
+
+# Quartus generated files
 db/
 incremental_db/
 output_files/
-*_pin_model_dump.txt
 *.qsf
 *.qws
 *.bak
