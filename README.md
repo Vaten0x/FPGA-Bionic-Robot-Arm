@@ -18,7 +18,7 @@ Verification: UVM
 
 Synthesis: Quartus (for DE1-SoC)
 
-## To Compile & Simulate with Synopsys VCS
+## To Compile with Synopsys VCS
 
 First cd into the root directory of the project
 
@@ -26,15 +26,10 @@ First cd into the root directory of the project
 cd FPGA_Bionic_Robot_Arm
 ```
 
-Then run the following command to compile and simulate
+Then run the following command to compile
 
 ```bash
-vcs -sverilog -full64 \
-    FPGA_Bionic_Robot_Arm.sv \
-    pwm_test.sv \
-    servo_pwm.sv \
-    seven_segment_display.sv \
-    -R
+vcs -sverilog -full64 FPGA_Bionic_Robot_Arm.sv pwm_test.sv servo_pwm.sv seven_segment_display.sv
 ```
 
 ## Hardware Components

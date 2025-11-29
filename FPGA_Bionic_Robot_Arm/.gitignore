@@ -1,6 +1,8 @@
 # VCS generated files
-
+csrc/
+simv*
 *simv.daidir/
+ucli.key
 *_pin_model_dump.txt
 
 # Verdi generated files
