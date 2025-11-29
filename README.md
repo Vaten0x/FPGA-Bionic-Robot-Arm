@@ -10,9 +10,9 @@ This project implements a bionic robot hand controlled by an FPGA (DE1-SoC) usin
 
 ## Hardware Tools
 
-Simulation: VCS (runs UVM testbenches) - Currently waiting for access
+Simulation: VCS (runs UVM testbenches)
 
-Debug: Verdi (waveform viewer) - Currently waiting for access
+Debug: Verdi (waveform viewer)
 
 Verification: UVM
 
