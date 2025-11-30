@@ -7,6 +7,11 @@ ucli.key
 
 # Verdi generated files
 verdiLog/
+novas.rc
+novas.conf
+novas.fsdb
+novas_dump.log
+*.fsdb
 
 # Quartus generated files
 db/

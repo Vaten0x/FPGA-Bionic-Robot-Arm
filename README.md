@@ -14,11 +14,11 @@ Simulation: Synopsys VCS
 
 Waveform Debugger: Verdi
 
-Verification: UVM
+Verification: UVM & System Verilog Testbench
 
 Synthesis: Quartus (for DE1-SoC)
 
-## To Compile with Synopsys VCS
+## Using Synopsys VCS & Verdi with this project
 
 First cd into the root directory of the project
 
@@ -26,10 +26,21 @@ First cd into the root directory of the project
 cd FPGA_Bionic_Robot_Arm
 ```
 
-Then run the following command to compile
+Then run the following command to compile for Verdi
 
 ```bash
-vcs -sverilog -full64 FPGA_Bionic_Robot_Arm.sv pwm_test.sv servo_pwm.sv seven_segment_display.sv
+vcs -sverilog -full64 -debug_access+all pwm_test.sv servo_pwm.sv seven_segment_display.sv pwm_test_tb.sv -o simv
+```
+
+Run the simulation
+
+```bash
+./simv
+```
+
+Open Verdi (make sure X11 forwarding is enabled if using SSH)
+```bash
+verdi -ssf novas.fsdb &
 ```
 
 ## Hardware Components
