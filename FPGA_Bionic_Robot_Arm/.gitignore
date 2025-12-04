@@ -9,7 +9,7 @@ ucli.key
 verdiLog/
 novas.rc
 novas.conf
-novas.fsdb
+novas.fsdb*
 novas_dump.log
 *.fsdb
 

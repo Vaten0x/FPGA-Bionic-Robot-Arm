@@ -29,7 +29,7 @@ cd FPGA_Bionic_Robot_Arm
 Then run the following command to compile for Verdi
 
 ```bash
-vcs -sverilog -full64 -debug_access+all pwm_test.sv servo_pwm.sv seven_segment_display.sv pwm_test_tb.sv -o simv
+vcs -sverilog -timescale=1ns/1ps -full64 -debug_access+all pwm_test.sv servo_pwm.sv seven_segment_display.sv pwm_test_tb.sv -o simv
 ```
 
 Run the simulation
@@ -39,9 +39,18 @@ Run the simulation
 ```
 
 Open Verdi (make sure X11 forwarding is enabled if using SSH)
+
+For testing with pwm_test.sv:
+```bash
+verdi -ssf novas.fsdb -sv pwm_test.sv servo_pwm.sv seven_segment_display.sv pwm_test_tb.sv &
+```
+
+General command:
 ```bash
 verdi -ssf novas.fsdb &
 ```
+
+Important: If you are doing in ssh, I recommend using MobaXterm for X11 forwarding.
 
 ## Hardware Components
 

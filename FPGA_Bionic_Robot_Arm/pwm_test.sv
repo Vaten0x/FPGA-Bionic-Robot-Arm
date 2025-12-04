@@ -4,7 +4,7 @@ module pwm_test (
     output wire [3:0][6:0] seven_seg_display,
     output wire [4:0] pwm_out
 );
-    // slow tick for width updates (~200 Hz)
+    // Generate ~3 Hz tick to update servo positions and 7-seg display (3 times per second)
     reg [23:0] slow = 0;
     always @(posedge clk) slow <= slow + 1;
     wire tick = (slow == 24'd0);
