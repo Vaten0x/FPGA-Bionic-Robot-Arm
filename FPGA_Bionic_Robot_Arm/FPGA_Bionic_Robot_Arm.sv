@@ -1,6 +1,7 @@
-// NOTE: Only use when you are testing with pwm_test.sv
 module FPGA_Bionic_Robot_Arm (
     input  CLOCK_50,
+    input KEY0,
+    input [7:0] SW,
     output pwm1, pwm2, pwm3, pwm4, pwm5
 );
 
@@ -11,6 +12,15 @@ module FPGA_Bionic_Robot_Arm (
     assign pwm3 = pwm[2];
     assign pwm4 = pwm[3];
     assign pwm5 = pwm[4];
+
+    wire [7:0] gesture_input;
+
+    button_input button_input_inst (
+        .clk(CLOCK_50),
+        .button(KEY0),
+        .sw(SW),
+        .gesture(gesture_input)
+    );
 
 
 endmodule
