@@ -55,7 +55,7 @@ module gesture_decoder (
                 width_middle <= width_middle;
                 width_ring <= width_ring;
                 width_pinky <= width_pinky;
-            end
+        end
     end
     
 endmodule
