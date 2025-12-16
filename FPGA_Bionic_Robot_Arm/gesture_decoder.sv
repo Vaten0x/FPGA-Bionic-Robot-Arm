@@ -49,14 +49,13 @@ module gesture_decoder (
                     width_pinky <= width_pinky;
                 end
             endcase
-            else begin //maintain current widths if gesture is 0
+        end else begin //maintain current widths if gesture is 0
                 width_thumb <= width_thumb;
                 width_index <= width_index;
                 width_middle <= width_middle;
                 width_ring <= width_ring;
                 width_pinky <= width_pinky;
             end
-        end
     end
     
 endmodule
