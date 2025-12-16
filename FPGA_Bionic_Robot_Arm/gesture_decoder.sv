@@ -39,4 +39,4 @@ module gesture_decoder (
         endcase
     end
     
-endmodule;
+endmodule
