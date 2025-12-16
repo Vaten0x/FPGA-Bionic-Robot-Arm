@@ -16,25 +16,25 @@ module gesture_decoder (
     always @(posedge clk) begin
         case(gesture)
             8'b00000001: begin // Unknown Gesture
-                assign width_thumb = 16'd1500;
-                assign width_index = 16'd1500;
-                assign width_middle = 16'd1500;
-                assign width_ring = 16'd1500;
-                assign width_pinky = 16'd1500;
+                assign width_thumb <= 16'd1500;
+                assign width_index <= 16'd1500;
+                assign width_middle <= 16'd1500;
+                assign width_ring <= 16'd1500;
+                assign width_pinky <= 16'd1500;
             end
             8'b00000010: begin // Unknown Gesture
-                assign width_thumb = 16'd1400;
-                assign width_index = 16'd1400;
-                assign width_middle = 16'd1400;
-                assign width_ring = 16'd1400;
-                assign width_pinky = 16'd1400;
+                assign width_thumb <= 16'd1400;
+                assign width_index <= 16'd1400;
+                assign width_middle <= 16'd1400;
+                assign width_ring <= 16'd1400;
+                assign width_pinky <= 16'd1400;
             end
             default: begin // Default case
-                assign width_thumb = 16'd1500;
-                assign width_index = 16'd1500;
-                assign width_middle = 16'd1500;
-                assign width_ring = 16'd1500;
-                assign width_pinky = 16'd1500;
+                assign width_thumb <= 16'd1500;
+                assign width_index <= 16'd1500;
+                assign width_middle <= 16'd1500;
+                assign width_ring <= 16'd1500;
+                assign width_pinky <= 16'd1500;
             end
         endcase
     end
