@@ -22,5 +22,10 @@ module FPGA_Bionic_Robot_Arm (
         .gesture(gesture_input)
     );
 
+    gesture_decoder gesture_decoder_inst (
+        .clk(CLOCK_50),
+        .gesture(gesture_input),
+        .pwm_out(pwm)
+    );
 
 endmodule
