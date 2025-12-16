@@ -5,14 +5,19 @@ module button_input(
     output reg [7:0] gesture
 );
 
-    // Double FF for metastability and prev state for falling edge detection
-    reg button_sync1, button_sync2, prev_button; 
+    // Double FF for metastability and third FF for edge detection
+    reg button_sync_0, button_sync_1, button_prev;
 
     always @(posedge clk) begin
-        button_sync1 <= button;
-        button_sync2 <= button_sync1;
-        prev_button <= button_sync2;
-        gesture <= (!button_sync2 && prev_button) ? sw : gesture;
+        button_sync_0 <= button;
+        button_sync_1 <= button_sync_0;
+        button_prev <= button_sync_1;
+
+        if (button_prev && !button_sync_1) begin
+            gesture <= sw;
+        end else begin
+            gesture <= 8'b00000000;
+        end
     end
 
 endmodule

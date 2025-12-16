@@ -25,7 +25,7 @@ module gesture_decoder (
             width_middle <= 16'd1500;
             width_ring <= 16'd1500;
             width_pinky <= 16'd1500;
-        end else begin
+        end else if (gesture != 8'b00000000) begin
             case(gesture)
                 8'b00000001: begin // Unknown Gesture
                     width_thumb <= 16'd1600;
@@ -49,6 +49,13 @@ module gesture_decoder (
                     width_pinky <= width_pinky;
                 end
             endcase
+            else begin //maintain current widths if gesture is 0
+                width_thumb <= width_thumb;
+                width_index <= width_index;
+                width_middle <= width_middle;
+                width_ring <= width_ring;
+                width_pinky <= width_pinky;
+            end
         end
     end
     
