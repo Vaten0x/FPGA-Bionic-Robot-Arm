@@ -1,6 +1,7 @@
 module FPGA_Bionic_Robot_Arm (
     input  CLOCK_50,
     input KEY0,
+    input KEY1,
     input [7:0] SW,
     output pwm1, pwm2, pwm3, pwm4, pwm5
 );
@@ -17,13 +18,14 @@ module FPGA_Bionic_Robot_Arm (
 
     button_input button_input_inst (
         .clk(CLOCK_50),
-        .button(KEY0),
+        .button(KEY1),
         .sw(SW),
         .gesture(gesture_input)
     );
 
     gesture_decoder gesture_decoder_inst (
         .clk(CLOCK_50),
+        .reset(KEY0),
         .gesture(gesture_input),
         .pwm_out(pwm)
     );
