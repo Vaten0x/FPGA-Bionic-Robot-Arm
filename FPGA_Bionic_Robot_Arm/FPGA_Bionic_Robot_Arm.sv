@@ -1,7 +1,7 @@
 module FPGA_Bionic_Robot_Arm (
     input  CLOCK_50,
-    input KEY0,
-    input KEY1,
+    input KEY0, //This is RESET
+    input KEY1, //This is SEND
     input [7:0] SW,
     output pwm1, pwm2, pwm3, pwm4, pwm5
 );
