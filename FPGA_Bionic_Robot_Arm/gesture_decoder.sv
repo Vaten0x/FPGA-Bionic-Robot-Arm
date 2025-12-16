@@ -4,7 +4,7 @@ module gesture_decoder (
     output reg [4:0] pwm_out
 );
 
-    wire [7:0] width_thumb, width_index, width_middle, width_ring, width_pinky;
+    reg [15:0] width_thumb, width_index, width_middle, width_ring, width_pinky;
     
     // instantiate 5 servo PWM generators
     servo_pwm pwm_instance_1 (.clk(clk), .width_us(width_thumb), .pwm(pwm_out[0]));
@@ -15,33 +15,26 @@ module gesture_decoder (
 
     always @(posedge clk) begin
         case(gesture)
-            8'b00000001: begin // Fist
-                assign width_thumb = 8'd1000;
-                assign width_index = 8'd1000;
-                assign width_middle = 8'd1000;
-                assign width_ring = 8'd1000;
-                assign width_pinky = 8'd1000;
+            8'b00000001: begin // Unknown Gesture
+                assign width_thumb = 16'd1500;
+                assign width_index = 16'd1500;
+                assign width_middle = 16'd1500;
+                assign width_ring = 16'd1500;
+                assign width_pinky = 16'd1500;
             end
-            8'b00000010: begin // Open Hand
-                assign width_thumb = 8'd2000;
-                assign width_index = 8'd2000;
-                assign width_middle = 8'd2000;
-                assign width_ring = 8'd2000;
-                assign width_pinky = 8'd2000;
+            8'b00000010: begin // Unknown Gesture
+                assign width_thumb = 16'd1400;
+                assign width_index = 16'd1400;
+                assign width_middle = 16'd1400;
+                assign width_ring = 16'd1400;
+                assign width_pinky = 16'd1400;
             end
-            8'b00000100: begin // Pointing
-                assign width_thumb = 8'd1500;
-                assign width_index = 8'd2000;
-                assign width_middle = 8'd1000;
-                assign width_ring = 8'd1000;
-                assign width_pinky = 8'd1000;
-            end
-            default: begin // Neutral
-                assign width_thumb = 8'd1500;
-                assign width_index = 8'd1500;
-                assign width_middle = 8'd1500;
-                assign width_ring = 8'd1500;
-                assign width_pinky = 8'd1500;
+            default: begin // Default case
+                assign width_thumb = 16'd1500;
+                assign width_index = 16'd1500;
+                assign width_middle = 16'd1500;
+                assign width_ring = 16'd1500;
+                assign width_pinky = 16'd1500;
             end
         endcase
     end

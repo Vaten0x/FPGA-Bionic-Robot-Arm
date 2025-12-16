@@ -26,11 +26,13 @@ First cd into the root directory of the project
 cd FPGA_Bionic_Robot_Arm
 ```
 
-Then run the following command to compile for Verdi
+Then run the following command to compile with VCS
 
 ```bash
-vcs -sverilog -timescale=1ns/1ps -full64 -debug_access+all pwm_test.sv servo_pwm.sv seven_segment_display.sv pwm_test_tb.sv -o simv
+vcs -sverilog -timescale=1ns/1ps -full64 -debug_access+all FPGA_Bionic_Robot_Arm.sv button_input.sv gesture_decoder.sv servo_pwm.sv -o simv
 ```
+
+If you are planning to test your robot arm with top_module_testing.sv you need to use a separate command
 
 Run the simulation
 
@@ -48,6 +50,11 @@ verdi -ssf novas.fsdb -sv pwm_test.sv servo_pwm.sv seven_segment_display.sv pwm_
 General command:
 ```bash
 verdi -ssf novas.fsdb &
+```
+
+To clean do:
+```bash
+rm -rf simv* csrc *.daidir AN.DB work *.log
 ```
 
 Important: If you are doing in ssh, I recommend using MobaXterm for X11 forwarding.
