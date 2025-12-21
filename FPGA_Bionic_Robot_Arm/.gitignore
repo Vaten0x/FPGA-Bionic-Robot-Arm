@@ -12,6 +12,9 @@ novas.conf
 novas.fsdb*
 novas_dump.log
 *.fsdb
+.inter.fsdb*
+inter.fsdb*
+.vcs*
 
 # Quartus generated files
 db/

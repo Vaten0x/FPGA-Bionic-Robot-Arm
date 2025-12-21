@@ -1,7 +1,7 @@
 module top_module_tb();
 
     reg clk;
-    reg KEY0, KEY1;
+    reg KEY0, KEY1; //active low buttons
     reg [7:0] SW;
     wire pwm1, pwm2, pwm3, pwm4, pwm5;
 
@@ -24,11 +24,28 @@ module top_module_tb();
 
     initial begin
         #100;
-        KEY0 = 1'b1;
+        KEY0 = 1'b1; //reset off
+        KEY1 = 1'b1; //button off
+        #100;
+        KEY0 = 1'b0; //reset on
+        #100;
+        KEY0 = 1'b1; //reset off
+        #100;
+
+        //Test gesture 1 SW = 8'b00000001
+        SW = 8'b00000001;
+        #100;
         KEY1 = 1'b0;
         #100;
-        KEY0 = 1'b0;
+        KEY1 = 1'b1;
         #100;
-    end
 
+        $finish;
+    end
+    
+    initial begin
+        $fsdbDumpfile("novas.fsdb");
+        $fsdbDumpvars(0, top_module_tb);
+    end
+    
 endmodule
