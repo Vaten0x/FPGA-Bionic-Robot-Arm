@@ -28,7 +28,7 @@ module gesture_decoder (
         end else if (gesture != 8'b00000000) begin
             case(gesture)
                 8'b00000001: begin // Rock
-                    width_thumb <= 16'd1700;
+                    width_thumb <= 16'd1800;
                     width_index <= 16'd1800;
                     width_middle <= 16'd1800;
                     width_ring <= 16'd2000;
@@ -37,14 +37,14 @@ module gesture_decoder (
                 8'b00000010: begin // Paper
                     width_thumb <= 16'd1000;
                     width_index <= 16'd1100;
-                    width_middle <= 16'd1200;
+                    width_middle <= 16'd1000;
                     width_ring <= 16'd1100;
                     width_pinky <= 16'd1300;
                 end 
                 8'b00000011: begin // Scissors
-                    width_thumb <= 16'd1700;
+                    width_thumb <= 16'd1800;
                     width_index <= 16'd1100;
-                    width_middle <= 16'd1200;
+                    width_middle <= 16'd1000;
                     width_ring <= 16'd2000;
                     width_pinky <= 16'd2000;
                 end
