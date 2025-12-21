@@ -17,15 +17,21 @@ module servo_pwm #(
     localparam integer FRAME_TICKS  = PULSE_SIGNAL_US * TICKS_PER_US; // 1,000,000 ticks for 20ms frame
 
     reg [31:0] counter = 0;
-    reg [31:0] high_ticks;
 
     wire [15:0] w_us = (width_us < MIN_PULSE_WIDTH_US) ? MIN_PULSE_WIDTH_US :
                        (width_us > MAX_PULSE_WIDTH_US) ? MAX_PULSE_WIDTH_US : width_us; // Truncate to valid range
 
+    wire [31:0] high_ticks = w_us * TICKS_PER_US;
+
     // We want to create a PWM signal that is high for 'width_us' microseconds and repeat every 20ms using a counter here
     always @(posedge clk) begin
-        high_ticks <= w_us * TICKS_PER_US;
-        counter <= (counter == FRAME_TICKS-1) ? 0 : counter + 1;
+        
+        if (counter == FRAME_TICKS - 1) begin
+            counter <= 0;
+        end else begin
+            counter <= counter + 1;
+        end
+
         pwm <= (counter < high_ticks);
     end
 endmodule

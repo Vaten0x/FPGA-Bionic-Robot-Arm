@@ -24,6 +24,7 @@ module top_module_tb();
 
     initial begin
         #100;
+        SW = 8'b00000000;
         KEY0 = 1'b1; //reset off
         KEY1 = 1'b1; //button off
         #100;
@@ -38,7 +39,7 @@ module top_module_tb();
         KEY1 = 1'b0;
         #100;
         KEY1 = 1'b1;
-        #100;
+        #60_000_000; // 60ms, 3 PWM cycles
 
         $finish;
     end
