@@ -31,36 +31,36 @@ module gesture_decoder (
                     width_thumb <= 16'd1500;
                     width_index <= 16'd1500;
                     width_middle <= 16'd1500;
-                    width_ring <= 16'd1000;
-                    width_pinky <= 16'd1500;
+                    width_ring <= 16'd1500;
+                    width_pinky <= 16'd1000;
                 end
                 8'b00000010: begin // 1100 test
                     width_thumb <= 16'd1500;
                     width_index <= 16'd1500;
                     width_middle <= 16'd1500;
-                    width_ring <= 16'd1100;
-                    width_pinky <= 16'd1500;
+                    width_ring <= 16'd1500;
+                    width_pinky <= 16'd1100;
                 end 
                 8'b00000011: begin // 1200 test
                     width_thumb <= 16'd1500;
                     width_index <= 16'd1500;
                     width_middle <= 16'd1500;
-                    width_ring <= 16'd1200;
-                    width_pinky <= 16'd1500;
+                    width_ring <= 16'd1500;
+                    width_pinky <= 16'd1200;
                 end
                 8'b00000100: begin // 1300 test
                     width_thumb <= 16'd1500;
                     width_index <= 16'd1500;
                     width_middle <= 16'd1500;
-                    width_ring <= 16'd1300;
-                    width_pinky <= 16'd1500;
+                    width_ring <= 16'd1500;
+                    width_pinky <= 16'd1300;
                 end
                 8'b00000101: begin // 1400 test
                     width_thumb <= 16'd1500;
                     width_index <= 16'd1500;
                     width_middle <= 16'd1500;
-                    width_ring <= 16'd1400;
-                    width_pinky <= 16'd1500;
+                    width_ring <= 16'd1500;
+                    width_pinky <= 16'd1400;
                 end
                 8'b00000110: begin // 1500 test
                     width_thumb <= 16'd1500;
@@ -73,36 +73,36 @@ module gesture_decoder (
                     width_thumb <= 16'd1500;
                     width_index <= 16'd1500;
                     width_middle <= 16'd1500;
-                    width_ring <= 16'd1600;
-                    width_pinky <= 16'd1500;
+                    width_ring <= 16'd1500;
+                    width_pinky <= 16'd1600;
                 end
                 8'b00001000: begin // 1700 test
                     width_thumb <= 16'd1500;
                     width_index <= 16'd1500;
                     width_middle <= 16'd1500;
-                    width_ring <= 16'd1700;
-                    width_pinky <= 16'd1500;
+                    width_ring <= 16'd1500;
+                    width_pinky <= 16'd1700;
                 end
                 8'b00001001: begin // 1800 test
                     width_thumb <= 16'd1500;
                     width_index <= 16'd1500;
                     width_middle <= 16'd1500;
-                    width_ring <= 16'd1800;
-                    width_pinky <= 16'd1500;
+                    width_ring <= 16'd1500;
+                    width_pinky <= 16'd1800;
                 end
                 8'b00001010: begin // 1900 test
                     width_thumb <= 16'd1500;
                     width_index <= 16'd1500;
                     width_middle <= 16'd1500;
-                    width_ring <= 16'd1900;
-                    width_pinky <= 16'd1500;
+                    width_ring <= 16'd1500;
+                    width_pinky <= 16'd1900;
                 end
                 8'b00001011: begin // 2000 test
                     width_thumb <= 16'd1500;
                     width_index <= 16'd1500;
                     width_middle <= 16'd1500;
-                    width_ring <= 16'd2000;
-                    width_pinky <= 16'd1500;
+                    width_ring <= 16'd1500;
+                    width_pinky <= 16'd2000;
                 end
 
                 default: begin // Default case
