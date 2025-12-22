@@ -28,8 +28,8 @@ module gesture_decoder (
         end else if (gesture != 8'b00000000) begin
             case(gesture)
                 8'b00000001: begin // Rock
-                    width_thumb <= 16'd1800;
-                    width_index <= 16'd1800;
+                    width_thumb <= 16'd1900;
+                    width_index <= 16'd1900;
                     width_middle <= 16'd1800;
                     width_ring <= 16'd2000;
                     width_pinky <= 16'd2000;
