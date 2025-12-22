@@ -29,7 +29,7 @@ module gesture_decoder (
             case(gesture)
                 8'b00000001: begin // Rock
                     width_thumb <= 16'd1900;
-                    width_index <= 16'd1900;
+                    width_index <= 16'd2000;
                     width_middle <= 16'd1800;
                     width_ring <= 16'd2000;
                     width_pinky <= 16'd2000;
@@ -38,15 +38,64 @@ module gesture_decoder (
                     width_thumb <= 16'd1000;
                     width_index <= 16'd1100;
                     width_middle <= 16'd1000;
-                    width_ring <= 16'd1100;
+                    width_ring <= 16'd1000;
                     width_pinky <= 16'd1300;
                 end 
                 8'b00000011: begin // Scissors
-                    width_thumb <= 16'd1800;
+                    width_thumb <= 16'd1900;
                     width_index <= 16'd1100;
                     width_middle <= 16'd1000;
                     width_ring <= 16'd2000;
                     width_pinky <= 16'd2000;
+                end
+                8'b00000100 begin // Thumb only
+                    width_thumb <= 16'd1900;
+                    width_index <= 16'd1100;
+                    width_middle <= 16'd1000;
+                    width_ring <= 16'd1000;
+                    width_pinky <= 16'd1300;
+                end
+                8'b00000101 begin // Index only
+                    width_thumb <= 16'd1000;
+                    width_index <= 16'd2000;
+                    width_middle <= 16'd1000;
+                    width_ring <= 16'd1000;
+                    width_pinky <= 16'd1300;
+                end
+                8'b00000110 begin // Middle only
+                    width_thumb <= 16'd1000;
+                    width_index <= 16'd1100;
+                    width_middle <= 16'd1800;
+                    width_ring <= 16'd1000;
+                    width_pinky <= 16'd1300;
+                end
+                8'b00000111 begin // Ring only
+                    width_thumb <= 16'd1000;
+                    width_index <= 16'd1100;
+                    width_middle <= 16'd1000;
+                    width_ring <= 16'd2000;
+                    width_pinky <= 16'd1300;
+                end
+                8'b00001000 begin // Pinky only
+                    width_thumb <= 16'd1000;
+                    width_index <= 16'd1100;
+                    width_middle <= 16'd1000;
+                    width_ring <= 16'd1000;
+                    width_pinky <= 16'd2000;
+                end
+                8'b00001001 begin // Pinky Promise Sign
+                    width_thumb <= 16'd1000;
+                    width_index <= 16'd2000;
+                    width_middle <= 16'd1800;
+                    width_ring <= 16'd2000;
+                    width_pinky <= 16'd1300;
+                end
+                8'b00001010 begin // Rock Sign
+                    width_thumb <= 16'd1000;
+                    width_index <= 16'd1100;
+                    width_middle <= 16'd1800;
+                    width_ring <= 16'd2000;
+                    width_pinky <= 16'd1300;
                 end
                 default: begin // Default case
                     width_thumb <= width_thumb;
