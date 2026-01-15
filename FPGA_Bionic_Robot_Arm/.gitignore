@@ -23,3 +23,10 @@ output_files/
 *.qsf
 *.qws
 *.bak
+*.rpt
+*.summary
+*.done
+*.smsg
+*.jdi
+*.sld
+*.pin
