@@ -4,9 +4,9 @@
 
 This project implements a bionic robot hand controlled by an FPGA (DE1-SoC) using System Verilog.
 
-## Video
+## Final Video
 
-**TODO:** Put video here
+[![FPGA Bionic Robot Hand](https://img.youtube.com/vi/r7wx9K2rkDc/0.jpg)](https://www.youtube.com/watch?v=r7wx9K2rkDc)
 
 ## Hardware Tools
 
