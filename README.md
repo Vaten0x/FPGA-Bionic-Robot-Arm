@@ -45,7 +45,7 @@ cd FPGA_Bionic_Robot_Arm
 Then run the following command to compile with VCS
 
 ```bash
-vcs -sverilog -timescale=1ns/1ps -full64 -debug_access+all -kdb top_module_tb.sv FPGA_Bionic_Robot_Arm.sv button_input.sv gesture_decoder.sv servo_pwm.sv -o simv
+vcs -sverilog -timescale=1ns/1ps -full64 -debug_access+all -kdb top_module_tb.sv FPGA_Bionic_Robot_Arm.sv button_input.sv FIFO.sv gesture_decoder.sv servo_pwm.sv -o simv
 ```
 
 If you are planning to test your robot arm with top_module_testing.sv you need to use a separate command
