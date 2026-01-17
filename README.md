@@ -6,7 +6,7 @@ This project implements a bionic robot hand controlled by an FPGA (DE1-SoC) usin
 
 ## Final Video
 
-[![FPGA Bionic Robot Hand](https://img.youtube.com/vi/r7wx9K2rkDc/0.jpg)](https://www.youtube.com/watch?v=r7wx9K2rkDc)
+Link to YouTube Video: [https://www.youtube.com/watch?v=r7wx9K2rkDc](https://www.youtube.com/watch?v=r7wx9K2rkDc)
 
 ## Hardware Tools
 
@@ -17,6 +17,22 @@ Waveform Debugger: Verdi
 Verification: UVM & System Verilog Testbench
 
 Synthesis: Quartus (for DE1-SoC)
+
+## Hardware Components
+
+- **[DE1-SoC FPGA Development Board (Cyclone V Soc Altera)](http://www.ee.ic.ac.uk/pcheung/teaching/ee2_digital/de1-soc_user_manual.pdf)**: Acts as the main controller, generating PWM signals in Verilog for each servo motor based on microcoded instruction decoding.
+- **[5V 30A 150W Power Supply](https://www.amazon.ca/gp/product/B07Q2VPPL1/ref=ox_sc_act_title_1?smid=A30R8HAL0CY1G4)**: Provides regulated power directly to all five servo motors to prevent brownouts and overheating during high torque loads.
+- **[HK-15298 Servo Motors](https://hobbyking.com/en_us/hobbykingtm-hk15298-high-voltage-coreless-digital-servo-mg-bb-15kg-0-11sec-66g.html)**: Five servo motors drive the fingers of the robotic hand. (An additional wrist motor is included in hardware but unused in this prototype)
+- **[3D-Printed Robotic Hand](https://inmoov.fr/hand-i2/)**: Designed based on the InMoov open-source hand project.
+- **[PCA9685 Driver (Used for testing)](https://www.amazon.ca/Newhail-PCA9685-Channel-Arduino-Raspberry/dp/B08YD8PDLS?crid=1EMZCJTIOY1GQ)**: Previously used with Raspberry Pi for testing, now bypassed in final FPGA-controlled version.
+- **Raspberry Pi 4 (Used for testing)**: Used during development for I2C control and quick prototyping before transitioning to the FPGA system.
+
+## Final Wiring
+
+![FPGA Diagram](images/FPGA_integration/FPGA_diagram.jpg)
+
+## SystemVerilog Module Architecture
+![Module Architecture](images/FPGA_integration/module_architecture.jpg)
 
 ## Using Synopsys VCS & Verdi with this project
 
@@ -52,22 +68,6 @@ rm -rf simv* csrc *.daidir AN.DB work *.log
 ```
 
 Important: If you are doing in ssh, I recommend using MobaXterm for X11 forwarding.
-
-## Hardware Components
-
-- **[DE1-SoC FPGA Development Board (Cyclone V Soc Altera)](http://www.ee.ic.ac.uk/pcheung/teaching/ee2_digital/de1-soc_user_manual.pdf)**: Acts as the main controller, generating PWM signals in Verilog for each servo motor based on microcoded instruction decoding.
-- **[5V 30A 150W Power Supply](https://www.amazon.ca/gp/product/B07Q2VPPL1/ref=ox_sc_act_title_1?smid=A30R8HAL0CY1G4)**: Provides regulated power directly to all five servo motors to prevent brownouts and overheating during high torque loads.
-- **[HK-15298 Servo Motors](https://hobbyking.com/en_us/hobbykingtm-hk15298-high-voltage-coreless-digital-servo-mg-bb-15kg-0-11sec-66g.html)**: Five servo motors drive the fingers of the robotic hand. (An additional wrist motor is included in hardware but unused in this prototype)
-- **[3D-Printed Robotic Hand](https://inmoov.fr/hand-i2/)**: Designed based on the InMoov open-source hand project.
-- **[PCA9685 Driver (Used for testing)](https://www.amazon.ca/Newhail-PCA9685-Channel-Arduino-Raspberry/dp/B08YD8PDLS?crid=1EMZCJTIOY1GQ)**: Previously used with Raspberry Pi for testing, now bypassed in final FPGA-controlled version.
-- **Raspberry Pi 4 (Used for testing)**: Used during development for I2C control and quick prototyping before transitioning to the FPGA system.
-
-## Final Wiring
-
-![FPGA Diagram](images/FPGA_integration/FPGA_diagram.jpg)
-
-## SystemVerilog Module Architecture
-![Module Architecture](images/FPGA_integration/module_architecture.jpg)
 
 ## Demonstration (Story & Images & Videos)
 
