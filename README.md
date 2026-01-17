@@ -66,6 +66,9 @@ Important: If you are doing in ssh, I recommend using MobaXterm for X11 forwardi
 
 ![FPGA Diagram](images/FPGA_integration/FPGA_diagram.jpg)
 
+## SystemVerilog Module Architecture
+![Module Architecture](images/FPGA_integration/module_architecture.jpg)
+
 ## Demonstration (Story & Images & Videos)
 
 <details>
@@ -117,7 +120,11 @@ Important: If you are doing in ssh, I recommend using MobaXterm for X11 forwardi
 
   It took me quite long to find how my DE1-SOC (Cyclone V Soc Altera) GPIO Pins work, I ended up finding it in [Cornell University ECE Course](https://people.ece.cornell.edu/land/courses/ece5760/). 
 
-  After testing the robot arm actually moves with FPGA using Quartus, I started working on the actual design how I would integrate this with a FIFO. 
+  After testing the robot arm actually moves with FPGA using Quartus. I then went on creating UVM_FIFO private project that I used to queue up commands to send to the robot arm. 
+
+  Finally after getting the UVM_FIFO working, I integrated everything together to create the final product.
+
+  <a href="https://www.youtube.com/watch?v=r7wx9K2rkDc">Watch the full final video here</a>
 
   <p>
     <img src="images/FPGA_integration/image0.jpg" alt="Build step 1" width="400" style="margin:5px;">
